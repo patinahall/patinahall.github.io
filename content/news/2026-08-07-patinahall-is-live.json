@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "slug": "patinahall-is-live",
+  "title": "PatinaHall is live",
+  "description": "The first public version of PatinaHall is now open for discovering vintage furniture, antiques, independent stores, and practical buying guides.",
+  "publishedAt": "2026-08-07",
+  "label": "Launch note",
+  "sections": [
+    {
+      "paragraphs": [
+        "Today we are opening the first public version of PatinaHall — a new place to discover vintage furniture and antiques with history, character, and a life beyond the ordinary.",
+        "PatinaHall brings current pieces, independent stores, and practical buying guides together in one calm place. You can browse the catalogue, learn what to look for, and continue directly to the seller when you find something worth keeping."
+      ]
+    },
+    {
+      "heading": "A beginning in the Netherlands",
+      "paragraphs": [
+        "We are starting in the Netherlands with an English-language marketplace and an initial selection of furniture and objects. The catalogue, store stories, and ways to explore them will keep growing from here.",
+        "This first release is deliberately simple: discovery happens on PatinaHall, while any purchase, payment, delivery, or return remains directly between the buyer and the independent seller."
+      ]
+    }
+  ],
+  "callToAction": {
+    "label": "Visit PatinaHall",
+    "href": "https://patinahall.com/"
+  }
+}

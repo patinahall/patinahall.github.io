@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>PatinaHall News</title>
+    <link>https://patinahall.github.io/</link>
+    <description>Official news, launch notes, and updates from the PatinaHall vintage furniture and antiques marketplace.</description>
+    <language>en</language>
+    <item>
+      <title>Entourage Finds is now featured on PatinaHall</title>
+      <link>https://patinahall.github.io/news/entourage-finds-featured/</link>
+      <guid isPermaLink="true">https://patinahall.github.io/news/entourage-finds-featured/</guid>
+      <pubDate>Sun, 09 Aug 2026 12:00:00 GMT</pubDate>
+      <description>A dedicated Entourage Finds Store page now brings its current furniture and object selection together on PatinaHall.</description>
+    </item>
+    <item>
+      <title>PatinaHall is live</title>
+      <link>https://patinahall.github.io/news/patinahall-is-live/</link>
+      <guid isPermaLink="true">https://patinahall.github.io/news/patinahall-is-live/</guid>
+      <pubDate>Fri, 07 Aug 2026 12:00:00 GMT</pubDate>
+      <description>The first public version of PatinaHall is now open for discovering vintage furniture, antiques, independent stores, and practical buying guides.</description>
+    </item>
+  </channel>
+</rss>
