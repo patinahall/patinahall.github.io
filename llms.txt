@@ -1,0 +1,19 @@
+# PatinaHall
+
+> PatinaHall is a marketplace for vintage furniture, antiques, design objects, and independent stores. It begins in the Netherlands and helps buyers discover current pieces while keeping the original seller clear.
+
+Canonical marketplace: https://patinahall.com/
+Official dated updates: https://patinahall.github.io/
+
+## Main public resources
+
+- Catalogue: https://patinahall.com/catalog
+- Independent stores: https://patinahall.com/stores
+- Furniture and antiques guides: https://patinahall.com/guides
+- PatinaHall Journal: https://patinahall.com/journal
+- Seller workspace: https://patinahall.com/seller/
+- Public roadmap: https://github.com/patinahall/patinahall.github.io/issues
+
+## Publication boundary
+
+PatinaHall Updates contains short, factual release notes. Product listings, Store pages, evergreen Guides, and longer Journal stories remain canonical on patinahall.com and are not mirrored here.

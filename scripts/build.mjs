@@ -11,6 +11,19 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const checkOnly = process.argv.includes("--check");
 const siteOrigin = "https://patinahall.github.io";
 const marketplaceOrigin = "https://patinahall.com";
+const siteName = "PatinaHall Updates";
+const siteDescription =
+  "Official, dated updates from PatinaHall — a marketplace for vintage furniture, antiques, design objects, and independent stores.";
+const socialProfiles = Object.freeze([
+  "https://www.linkedin.com/company/patinahall/",
+  "https://www.instagram.com/patinahallcom/",
+  "https://nl.pinterest.com/patinahall/",
+  "https://www.youtube.com/@patinahall"
+]);
+const allowedEditorialLinkOrigins = new Set([
+  marketplaceOrigin,
+  "https://www.entouragefinds.com"
+]);
 const generated = [];
 
 const escapeHtml = (value) => String(value)
@@ -37,6 +50,22 @@ const boundedText = (value, field, maximum) => {
   assert(normalized.length > 0, `${field} must not be empty`);
   assert(normalized.length <= maximum, `${field} is too long`);
   return normalized;
+};
+
+const httpsUrl = (value, field, maximum = 320) => {
+  const input = boundedText(value, field, maximum);
+  let url;
+
+  try {
+    url = new URL(input);
+  } catch {
+    throw new TypeError(`${field} must be an absolute URL`);
+  }
+
+  assert(url.protocol === "https:", `${field} must use HTTPS`);
+  assert(url.username.length === 0 && url.password.length === 0,
+    `${field} must not contain credentials`);
+  return url;
 };
 
 const validatePost = (value, fileName) => {
@@ -71,6 +100,50 @@ const validatePost = (value, fileName) => {
   const href = boundedText(value.callToAction.href, `${fileName}.callToAction.href`, 240);
   assert(href.startsWith(`${marketplaceOrigin}/`), `${fileName}.callToAction.href must stay on PatinaHall`);
 
+  const relatedLinks = value.relatedLinks === undefined
+    ? []
+    : value.relatedLinks;
+  assert(Array.isArray(relatedLinks) && relatedLinks.length <= 2,
+    `${fileName}.relatedLinks must contain at most 2 links`);
+  const validatedRelatedLinks = relatedLinks.map((link, linkIndex) => {
+    assert(link !== null && typeof link === "object",
+      `${fileName}.relatedLinks[${linkIndex}] is invalid`);
+    const url = httpsUrl(
+      link.href,
+      `${fileName}.relatedLinks[${linkIndex}].href`
+    );
+    assert(allowedEditorialLinkOrigins.has(url.origin),
+      `${fileName}.relatedLinks[${linkIndex}].href is not an approved editorial origin`);
+    return {
+      label: boundedText(
+        link.label,
+        `${fileName}.relatedLinks[${linkIndex}].label`,
+        60
+      ),
+      href: url.href
+    };
+  });
+
+  let image;
+  if (value.image !== undefined) {
+    assert(value.image !== null && typeof value.image === "object",
+      `${fileName}.image is invalid`);
+    const imageUrl = httpsUrl(value.image.url, `${fileName}.image.url`);
+    assert(imageUrl.origin === siteOrigin,
+      `${fileName}.image.url must stay on PatinaHall Updates`);
+    assert(Number.isInteger(value.image.width) && value.image.width > 0,
+      `${fileName}.image.width must be a positive integer`);
+    assert(Number.isInteger(value.image.height) && value.image.height > 0,
+      `${fileName}.image.height must be a positive integer`);
+    image = {
+      url: imageUrl.href,
+      src: imageUrl.pathname,
+      alt: boundedText(value.image.alt, `${fileName}.image.alt`, 180),
+      width: value.image.width,
+      height: value.image.height
+    };
+  }
+
   return Object.freeze({
     slug,
     title: boundedText(value.title, `${fileName}.title`, 120),
@@ -81,7 +154,9 @@ const validatePost = (value, fileName) => {
     callToAction: {
       label: boundedText(value.callToAction.label, `${fileName}.callToAction.label`, 50),
       href
-    }
+    },
+    relatedLinks: validatedRelatedLinks,
+    ...(image === undefined ? {} : { image })
   });
 };
 
@@ -105,14 +180,14 @@ const formatDate = (date) => new Intl.DateTimeFormat("en-GB", {
 
 const navigation = `
   <header class="site-header">
-    <a class="brand" href="/" aria-label="PatinaHall News home">
+    <a class="brand" href="/" aria-label="PatinaHall Updates home">
       <span class="brand__mark" aria-hidden="true"></span>
-      <span>PATINAHALL NEWS</span>
+      <span>PATINAHALL UPDATES</span>
     </a>
     <nav class="site-nav" aria-label="Main navigation">
-      <a href="/news/">News</a>
+      <a href="/news/">Updates</a>
       <a href="/about/">About</a>
-      <a class="site-nav__primary" href="${marketplaceOrigin}/"><span>Visit PatinaHall</span><b aria-hidden="true">↗</b></a>
+      <a class="site-nav__primary" href="${marketplaceOrigin}/"><span>Explore PatinaHall</span><b aria-hidden="true">↗</b></a>
     </nav>
   </header>`;
 
@@ -121,19 +196,20 @@ const footer = `
     <div>
       <a class="brand" href="/">
         <span class="brand__mark" aria-hidden="true"></span>
-        <span>PATINAHALL NEWS</span>
+        <span>PATINAHALL UPDATES</span>
       </a>
-      <p>Official launch notes and updates from the PatinaHall vintage furniture and antiques marketplace.</p>
+      <p>Official, dated updates from PatinaHall — a marketplace for vintage furniture, antiques, design objects, and independent stores.</p>
     </div>
     <nav class="footer-links" aria-label="Footer navigation">
-      <a href="/news/">News</a>
+      <a href="/news/">Updates</a>
       <a href="/about/">About</a>
-      <a href="${marketplaceOrigin}/">PatinaHall ↗</a>
+      <a href="${marketplaceOrigin}/catalog">Catalogue ↗</a>
+      <a href="${marketplaceOrigin}/stores">Stores ↗</a>
     </nav>
     <small>© 2026 PatinaHall</small>
   </footer>`;
 
-const layout = ({ title, description, canonicalPath, body, pageClass = "", structuredData }) => `<!doctype html>
+const layout = ({ title, description, canonicalPath, body, pageClass = "", structuredData, image }) => `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -143,13 +219,21 @@ const layout = ({ title, description, canonicalPath, body, pageClass = "", struc
   <meta name="theme-color" content="#f4f0e8">
   <title>${escapeHtml(title)}</title>
   <link rel="canonical" href="${siteOrigin}${canonicalPath}">
-  <link rel="alternate" type="application/rss+xml" title="PatinaHall News" href="${siteOrigin}/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="PatinaHall Updates" href="${siteOrigin}/feed.xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="shortcut icon" href="/favicon.ico">
   <link rel="stylesheet" href="/assets/styles.css">
-  <meta property="og:site_name" content="PatinaHall News">
+  <meta property="og:site_name" content="PatinaHall Updates">
   <meta property="og:type" content="${structuredData?.["@type"] === "NewsArticle" ? "article" : "website"}">
   <meta property="og:title" content="${escapeHtml(title)}">
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${siteOrigin}${canonicalPath}">
+  <meta name="twitter:card" content="${image === undefined ? "summary" : "summary_large_image"}">
+  ${image === undefined ? "" : `<meta property="og:image" content="${escapeHtml(image.url)}">
+  <meta property="og:image:alt" content="${escapeHtml(image.alt)}">
+  <meta property="og:image:width" content="${image.width}">
+  <meta property="og:image:height" content="${image.height}">
+  <meta name="twitter:image" content="${escapeHtml(image.url)}">`}
   ${structuredData === undefined ? "" : `<script type="application/ld+json">${jsonForScript(structuredData)}</script>`}
 </head>
 <body class="${escapeHtml(pageClass)}">
@@ -173,40 +257,82 @@ const homeBody = `
   <main>
     <section class="hero">
       <div>
-        <p class="eyebrow">From the marketplace</p>
-        <h1>News &amp;<br>field notes.</h1>
+        <p class="eyebrow">Official PatinaHall updates</p>
+        <h1>Building a clearer marketplace for furniture with history.</h1>
       </div>
-      <p class="hero__note">Updates from PatinaHall — a growing marketplace for furniture and objects with history, gathered from independent shops and dealers.</p>
+      <div class="hero__note">
+        <p>PatinaHall brings vintage furniture, antiques, and design objects from independent stores into one calm, current catalogue.</p>
+        <p>Buyers discover pieces on PatinaHall and continue to the original seller.</p>
+        <div class="hero__actions">
+          <a href="${marketplaceOrigin}/catalog">Browse the catalogue <span aria-hidden="true">→</span></a>
+          <a href="${marketplaceOrigin}/seller/">For store owners <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
     </section>
     <section class="latest" aria-labelledby="latest-title">
       <div class="section-heading">
-        <h2 id="latest-title">Latest updates</h2>
-        <a href="/news/">View all news →</a>
+        <div>
+          <p class="eyebrow">Public record</p>
+          <h2 id="latest-title">Latest updates</h2>
+        </div>
+        <a href="/news/">View all updates →</a>
       </div>
-      <div class="news-list">
-        ${posts.slice(0, 6).map((post) => newsCard(post)).join("")}
+      <div class="news-list news-list--home">
+        ${posts.slice(0, 3).map((post) => newsCard(post)).join("")}
+      </div>
+    </section>
+    <section class="identity" aria-labelledby="identity-title">
+      <header>
+        <p class="eyebrow">What PatinaHall does</p>
+        <h2 id="identity-title">Independent stores stay independent. Their pieces become easier to discover.</h2>
+      </header>
+      <div class="identity__list">
+        <article>
+          <span>01</span>
+          <h3><a href="${marketplaceOrigin}/catalog">One current catalogue</a></h3>
+          <p>Explore available furniture and objects from different stores without losing the identity of the seller.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3><a href="${marketplaceOrigin}/stores">Independent store pages</a></h3>
+          <p>Understand who found each piece, then continue directly to that store when something feels right.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3><a href="${marketplaceOrigin}/seller/">Catalogue import for sellers</a></h3>
+          <p>Supported Shopify stores can prepare their existing catalogue privately instead of recreating every listing.</p>
+        </article>
       </div>
     </section>
   </main>`;
 
-const homeDescription = "Official news, launch notes, and updates from the PatinaHall vintage furniture and antiques marketplace.";
-
+const organizationId = `${marketplaceOrigin}/#organization`;
+const websiteId = `${siteOrigin}/#website`;
+const organizationData = Object.freeze({
+  "@type": "Organization",
+  "@id": organizationId,
+  name: "PatinaHall",
+  url: `${marketplaceOrigin}/`,
+  description:
+    "A marketplace for vintage furniture, antiques, design objects, and independent stores.",
+  sameAs: socialProfiles
+});
 const websiteData = {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "PatinaHall News",
-  description: homeDescription,
-  url: `${siteOrigin}/`,
-  publisher: {
-    "@type": "Organization",
-    name: "PatinaHall",
-    url: `${marketplaceOrigin}/`
-  }
+  "@graph": [organizationData, {
+    "@type": "WebSite",
+    "@id": websiteId,
+    name: siteName,
+    description: siteDescription,
+    url: `${siteOrigin}/`,
+    publisher: organizationData,
+    about: { "@id": organizationId }
+  }]
 };
 
 generated.push(["index.html", layout({
-  title: "PatinaHall News — launch notes and marketplace updates",
-  description: homeDescription,
+  title: "PatinaHall Updates — official marketplace releases",
+  description: siteDescription,
   canonicalPath: "/",
   body: homeBody,
   pageClass: "home-page",
@@ -217,12 +343,12 @@ const archiveBody = `
   <main>
     <section class="archive-intro">
       <div>
-        <p class="eyebrow">News archive</p>
+        <p class="eyebrow">Dated public record</p>
         <h1>All updates.</h1>
       </div>
-      <p>Launch notes, new Store pages, and considered updates from the people building PatinaHall.</p>
+      <p>Short, factual notes about public releases, independent Store pages, and meaningful changes to PatinaHall.</p>
     </section>
-    <section class="archive" aria-label="All PatinaHall news">
+    <section class="archive" aria-label="All PatinaHall updates">
       <div class="news-list">
         ${posts.map((post) => newsCard(post)).join("")}
       </div>
@@ -230,8 +356,8 @@ const archiveBody = `
   </main>`;
 
 generated.push(["news/index.html", layout({
-  title: "News archive · PatinaHall News",
-  description: "Browse every official launch note and marketplace update from PatinaHall.",
+  title: "All updates · PatinaHall Updates",
+  description: "Browse every official, dated marketplace update from PatinaHall.",
   canonicalPath: "/news/",
   body: archiveBody,
   pageClass: "archive-page"
@@ -244,6 +370,9 @@ for (const post of posts) {
         ${section.heading === undefined ? "" : `<h2>${escapeHtml(section.heading)}</h2>`}
         ${section.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("\n        ")}
       </section>`).join("");
+  const relatedLinks = post.relatedLinks.map((link) =>
+    `<a class="article__related-link" href="${escapeHtml(link.href)}">${escapeHtml(link.label)} <span aria-hidden="true">↗</span></a>`
+  ).join("");
   const articleBody = `
   <main class="article">
     <article>
@@ -253,9 +382,15 @@ for (const post of posts) {
         <p class="article__dek">${escapeHtml(post.description)}</p>
         <time datetime="${post.publishedAt}">Published ${escapeHtml(formatDate(post.publishedAt))}</time>
       </header>
+      ${post.image === undefined ? "" : `<figure class="article__media">
+        <img src="${escapeHtml(post.image.src)}" alt="${escapeHtml(post.image.alt)}" width="${post.image.width}" height="${post.image.height}" fetchpriority="high">
+      </figure>`}
       <div class="article__body">
         ${sections}
-        <a class="article__cta" href="${escapeHtml(post.callToAction.href)}">${escapeHtml(post.callToAction.label)} <span aria-hidden="true">↗</span></a>
+        <div class="article__actions">
+          <a class="article__cta" href="${escapeHtml(post.callToAction.href)}">${escapeHtml(post.callToAction.label)} <span aria-hidden="true">↗</span></a>
+          ${relatedLinks}
+        </div>
       </div>
     </article>
   </main>`;
@@ -267,23 +402,20 @@ for (const post of posts) {
     datePublished: post.publishedAt,
     dateModified: post.publishedAt,
     mainEntityOfPage: `${siteOrigin}${canonicalPath}`,
-    author: {
-      "@type": "Organization",
-      name: "PatinaHall"
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "PatinaHall",
-      url: `${marketplaceOrigin}/`
-    }
+    author: organizationData,
+    publisher: organizationData,
+    isPartOf: { "@id": websiteId },
+    about: { "@id": organizationId },
+    ...(post.image === undefined ? {} : { image: [post.image.url] })
   };
   generated.push([`news/${post.slug}/index.html`, layout({
-    title: `${post.title} · PatinaHall News`,
+    title: `${post.title} · PatinaHall Updates`,
     description: post.description,
     canonicalPath,
     body: articleBody,
     pageClass: "article-page",
-    structuredData: articleData
+    structuredData: articleData,
+    ...(post.image === undefined ? {} : { image: post.image })
   })]);
 }
 
@@ -291,15 +423,16 @@ const aboutBody = `
   <main class="about-page">
     <div>
       <p class="eyebrow">About this publication</p>
-      <h1>Notes from PatinaHall.</h1>
-      <p>PatinaHall News is the official update journal for PatinaHall, a marketplace for vintage furniture, antiques, independent stores, and useful buying guidance.</p>
-      <p>We publish launch notes, meaningful marketplace changes, and new ways to explore furniture and objects with history. For the catalogue and practical guides, visit <a href="${marketplaceOrigin}/">patinahall.com</a>.</p>
+      <h1>The public record of what changed.</h1>
+      <p>PatinaHall Updates publishes short, dated notes about meaningful releases from PatinaHall, a marketplace for vintage furniture, antiques, design objects, and independent stores.</p>
+      <p>This publication does not mirror the catalogue or repeat buyer guides. Explore current pieces and Store pages on <a href="${marketplaceOrigin}/">patinahall.com</a>, read practical advice in <a href="${marketplaceOrigin}/guides">Guides</a>, and find longer stories in the <a href="${marketplaceOrigin}/journal">PatinaHall Journal</a>.</p>
+      <p>Product work that is suitable for public discussion is tracked in the <a href="https://github.com/patinahall/patinahall.github.io/issues">PatinaHall public roadmap on GitHub</a>.</p>
     </div>
   </main>`;
 
 generated.push(["about/index.html", layout({
-  title: "About · PatinaHall News",
-  description: "Learn what PatinaHall News publishes and how it relates to the PatinaHall marketplace.",
+  title: "About · PatinaHall Updates",
+  description: "Learn what PatinaHall Updates publishes and how it relates to the PatinaHall marketplace, Guides, Journal, and public roadmap.",
   canonicalPath: "/about/",
   body: aboutBody,
   pageClass: "about"
@@ -315,33 +448,38 @@ const notFoundBody = `
   </main>`;
 
 generated.push(["404.html", layout({
-  title: "Page not found · PatinaHall News",
-  description: "The requested PatinaHall News page could not be found.",
+  title: "Page not found · PatinaHall Updates",
+  description: "The requested PatinaHall Updates page could not be found.",
   canonicalPath: "/404.html",
   body: notFoundBody,
   pageClass: "not-found-page"
 }).replace('<meta name="robots" content="index,follow">', '<meta name="robots" content="noindex,follow">')]);
 
-const sitemapPaths = [
-  "/",
-  "/news/",
-  "/about/",
-  ...posts.map((post) => `/news/${post.slug}/`)
+const latestPublishedAt = posts[0].publishedAt;
+const sitemapEntries = [
+  { path: "/", lastModified: latestPublishedAt },
+  { path: "/news/", lastModified: latestPublishedAt },
+  { path: "/about/", lastModified: latestPublishedAt },
+  ...posts.map((post) => ({
+    path: `/news/${post.slug}/`,
+    lastModified: post.publishedAt
+  }))
 ];
 
 generated.push(["sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapPaths.map((path) => `  <url><loc>${siteOrigin}${escapeXml(path)}</loc></url>`).join("\n")}
+${sitemapEntries.map(({ path, lastModified }) => `  <url><loc>${siteOrigin}${escapeXml(path)}</loc><lastmod>${lastModified}</lastmod></url>`).join("\n")}
 </urlset>
 `]);
 
 generated.push(["feed.xml", `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>PatinaHall News</title>
+    <title>${siteName}</title>
     <link>${siteOrigin}/</link>
-    <description>${escapeXml(homeDescription)}</description>
+    <description>${escapeXml(siteDescription)}</description>
     <language>en</language>
+    <atom:link href="${siteOrigin}/feed.xml" rel="self" type="application/rss+xml" />
 ${posts.map((post) => `    <item>
       <title>${escapeXml(post.title)}</title>
       <link>${siteOrigin}/news/${post.slug}/</link>
@@ -357,6 +495,27 @@ generated.push(["robots.txt", `User-agent: *
 Allow: /
 
 Sitemap: ${siteOrigin}/sitemap.xml
+`]);
+
+generated.push(["llms.txt", `# PatinaHall
+
+> PatinaHall is a marketplace for vintage furniture, antiques, design objects, and independent stores. It begins in the Netherlands and helps buyers discover current pieces while keeping the original seller clear.
+
+Canonical marketplace: ${marketplaceOrigin}/
+Official dated updates: ${siteOrigin}/
+
+## Main public resources
+
+- Catalogue: ${marketplaceOrigin}/catalog
+- Independent stores: ${marketplaceOrigin}/stores
+- Furniture and antiques guides: ${marketplaceOrigin}/guides
+- PatinaHall Journal: ${marketplaceOrigin}/journal
+- Seller workspace: ${marketplaceOrigin}/seller/
+- Public roadmap: https://github.com/patinahall/patinahall.github.io/issues
+
+## Publication boundary
+
+PatinaHall Updates contains short, factual release notes. Product listings, Store pages, evergreen Guides, and longer Journal stories remain canonical on patinahall.com and are not mirrored here.
 `]);
 
 const mismatches = [];

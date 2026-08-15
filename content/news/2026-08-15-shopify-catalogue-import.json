@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "slug": "shopify-catalogue-import",
+  "title": "PatinaHall can now prepare Shopify catalogues",
+  "description": "Vintage furniture and antiques shops using Shopify can now bring their existing catalogue into a private PatinaHall workspace without rebuilding every listing.",
+  "publishedAt": "2026-08-15",
+  "label": "Seller update",
+  "image": {
+    "url": "https://patinahall.github.io/assets/media/shopify-catalogue-import-083a57c78571.webp",
+    "alt": "An antique terracotta armchair beside an open sunlit doorway.",
+    "width": 1122,
+    "height": 1402
+  },
+  "sections": [
+    {
+      "heading": "Start with the store you already run",
+      "paragraphs": [
+        "A shop owner can start with the public website customers already use. PatinaHall identifies a supported Shopify storefront and prepares its catalogue inside the seller workspace.",
+        "Titles, prices, and product details do not need to be re-entered simply to begin. The technical connection stays behind the scenes while the store remains the lasting identity inside PatinaHall."
+      ]
+    },
+    {
+      "heading": "Private before public",
+      "paragraphs": [
+        "The prepared catalogue is private. Giving PatinaHall a store address does not automatically publish products or create buyer-visible listings.",
+        "The owner reviews what was found, chooses which products to bring in, and remains in control of what is eventually shown to buyers. Preparation continues in the background, so the setup does not depend on keeping one browser page open."
+      ]
+    },
+    {
+      "heading": "Made for independent furniture stores",
+      "paragraphs": [
+        "The first supported path is Shopify and is designed around independent vintage furniture and antiques stores whose catalogues change one piece at a time.",
+        "The aim is deliberately simple: keep managing the original shop, let PatinaHall prepare the catalogue, and avoid maintaining the same collection twice."
+      ]
+    }
+  ],
+  "callToAction": {
+    "label": "Open the seller workspace",
+    "href": "https://patinahall.com/seller/"
+  }
+}

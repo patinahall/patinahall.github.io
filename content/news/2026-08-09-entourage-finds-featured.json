@@ -23,5 +23,11 @@
   "callToAction": {
     "label": "Explore Entourage Finds",
     "href": "https://patinahall.com/stores/entourage-finds"
-  }
+  },
+  "relatedLinks": [
+    {
+      "label": "Visit Entourage Finds",
+      "href": "https://www.entouragefinds.com/"
+    }
+  ]
 }

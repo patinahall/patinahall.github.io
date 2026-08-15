@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>PatinaHall News</title>
+    <title>PatinaHall Updates</title>
     <link>https://patinahall.github.io/</link>
-    <description>Official news, launch notes, and updates from the PatinaHall vintage furniture and antiques marketplace.</description>
+    <description>Official, dated updates from PatinaHall — a marketplace for vintage furniture, antiques, design objects, and independent stores.</description>
     <language>en</language>
+    <atom:link href="https://patinahall.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PatinaHall can now prepare Shopify catalogues</title>
+      <link>https://patinahall.github.io/news/shopify-catalogue-import/</link>
+      <guid isPermaLink="true">https://patinahall.github.io/news/shopify-catalogue-import/</guid>
+      <pubDate>Sat, 15 Aug 2026 12:00:00 GMT</pubDate>
+      <description>Vintage furniture and antiques shops using Shopify can now bring their existing catalogue into a private PatinaHall workspace without rebuilding every listing.</description>
+    </item>
     <item>
       <title>Entourage Finds is now featured on PatinaHall</title>
       <link>https://patinahall.github.io/news/entourage-finds-featured/</link>
