@@ -482,6 +482,59 @@ h3,
   line-height: 1.7;
 }
 
+.about-links {
+  margin-top: clamp(52px, 8vw, 84px);
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.about-links .eyebrow {
+  margin: 0 0 16px;
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.2;
+}
+
+.about-links nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+}
+
+.about-links a {
+  min-height: 74px;
+  padding: 15px 16px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.about-links a:nth-child(odd) {
+  border-right: 1px solid var(--line);
+}
+
+.about-links a:hover,
+.about-links a:focus-visible {
+  background: var(--card);
+  color: var(--clay);
+}
+
+.about-links strong {
+  font-size: 0.98rem;
+}
+
+.about-links span {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
 .site-footer {
   min-height: 220px;
   padding: 52px 0;
@@ -613,6 +666,14 @@ h3,
   .footer-links {
     justify-content: flex-start;
     flex-wrap: wrap;
+  }
+
+  .about-links nav {
+    grid-template-columns: 1fr;
+  }
+
+  .about-links a:nth-child(odd) {
+    border-right: 0;
   }
 }
 
