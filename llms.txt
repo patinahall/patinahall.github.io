@@ -13,6 +13,7 @@ Official dated updates: https://patinahall.github.io/
 - PatinaHall Journal: https://patinahall.com/journal
 - Seller workspace: https://patinahall.com/seller/
 - Public roadmap: https://github.com/patinahall/patinahall.github.io/issues
+- Privacy choices: https://patinahall.github.io/privacy/
 
 ## Product principles
 

@@ -15,6 +15,7 @@ const siteName = "PatinaHall Updates";
 const siteDescription =
   "Official, dated updates from PatinaHall — a marketplace for vintage furniture, antiques, design objects, and independent stores.";
 const aboutUpdatedAt = "2026-08-16";
+const privacyUpdatedAt = "2026-08-16";
 const socialProfiles = Object.freeze([
   "https://www.linkedin.com/company/patinahall/",
   "https://www.instagram.com/patinahallcom/",
@@ -192,6 +193,25 @@ const navigation = `
     </nav>
   </header>`;
 
+const analyticsConsent = `
+  <aside class="analytics-consent" data-analytics-consent-panel hidden aria-label="Privacy choices">
+    <div class="analytics-consent__copy">
+      <div class="analytics-consent__heading">
+        <p class="eyebrow">Privacy choices</p>
+        <button class="analytics-consent__close" type="button" data-analytics-consent-close hidden aria-label="Close privacy choices">×</button>
+      </div>
+      <h2>A clearer picture, only if you agree.</h2>
+      <p>Essential storage remembers this choice. Optional analytics helps us understand which updates are useful. This site works without analytics. <a href="/privacy/">Read the privacy note</a>.</p>
+      <p class="analytics-consent__detail">Allow all means essential storage plus optional analytics. Advertising and personalisation stay off.</p>
+      <p class="analytics-consent__status" data-analytics-consent-status role="status" hidden></p>
+      <p class="analytics-consent__error" data-analytics-consent-error role="alert" hidden>We could not save your choice. Enable site storage and try again; analytics remains off.</p>
+    </div>
+    <div class="analytics-consent__actions">
+      <button type="button" data-analytics-choice="denied" aria-pressed="false">Essential only</button>
+      <button type="button" data-analytics-choice="granted" aria-pressed="false">Allow all</button>
+    </div>
+  </aside>`;
+
 const footer = `
   <footer class="site-footer">
     <div>
@@ -204,6 +224,8 @@ const footer = `
     <nav class="footer-links" aria-label="Footer navigation">
       <a href="/news/">Updates</a>
       <a href="/about/">About</a>
+      <a href="/privacy/">Privacy</a>
+      <button type="button" class="footer-links__button" data-analytics-consent-open hidden>Privacy choices</button>
       <a href="${marketplaceOrigin}/catalog">Catalogue ↗</a>
       <a href="${marketplaceOrigin}/stores">Stores ↗</a>
     </nav>
@@ -213,6 +235,7 @@ const footer = `
 const layout = ({ title, description, canonicalPath, body, pageClass = "", structuredData, image }) => `<!doctype html>
 <html lang="en">
 <head>
+  <script src="/assets/analytics-consent.js" defer></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="${escapeHtml(description)}">
@@ -241,6 +264,7 @@ const layout = ({ title, description, canonicalPath, body, pageClass = "", struc
 ${navigation}
 ${body}
 ${footer}
+${analyticsConsent}
 </body>
 </html>
 `;
@@ -459,6 +483,40 @@ generated.push(["about/index.html", layout({
   pageClass: "about"
 })]);
 
+const privacyBody = `
+  <main class="privacy-page">
+    <header class="privacy-intro">
+      <p class="eyebrow">Privacy on PatinaHall Updates</p>
+      <h1>Measurement remains optional.</h1>
+      <p>Last updated 16 August 2026. PatinaHall Updates is a public editorial site. You can read every page without allowing analytics.</p>
+    </header>
+    <div class="privacy-sections">
+      <section>
+        <h2>Your choice</h2>
+        <p>Essential browser storage remembers your privacy choice for up to 180 days. If you choose Essential only, this site does not request Google Tag Manager or Google Analytics.</p>
+        <p>You can reopen Privacy choices in the footer at any time. Withdrawing consent stops future analytics loading after the page reloads; it does not automatically remove Google cookies already stored in your browser or delete data Google has already received.</p>
+      </section>
+      <section>
+        <h2>Optional analytics</h2>
+        <p>If you choose Allow all, this site loads Google Tag Manager container <code>GTM-K4GWHP6J</code>. Its reviewed configuration contains the Google Analytics 4 tag <code>G-2SNNEES0DF</code>.</p>
+        <p>Google may receive the page address and title, referrer, date and time, browser, device, language, screen, interaction and session identifiers, connection data needed for the request, and an approximate location derived from that connection data. PatinaHall does not deliberately add account credentials, email addresses, seller-workspace data, Product data, or seller-site purchase information to the analytics data layer on this site.</p>
+        <p>Analytics storage alone follows your choice. Advertising storage, advertising user data, advertising personalisation, optional functionality storage, and personalisation storage remain denied.</p>
+      </section>
+      <section>
+        <h2>More information</h2>
+        <p>Read the broader <a href="${marketplaceOrigin}/privacy">PatinaHall Privacy and Data Notice</a> and <a href="https://support.google.com/analytics/answer/11593727?hl=en">Google's Analytics privacy information</a>. Privacy questions can be sent to <a href="mailto:privacy@patinahall.com">privacy@patinahall.com</a>.</p>
+      </section>
+    </div>
+  </main>`;
+
+generated.push(["privacy/index.html", layout({
+  title: "Privacy · PatinaHall Updates",
+  description: "How PatinaHall Updates uses essential storage and consent-gated optional analytics.",
+  canonicalPath: "/privacy/",
+  body: privacyBody,
+  pageClass: "privacy"
+})]);
+
 const notFoundBody = `
   <main class="not-found">
     <div>
@@ -481,6 +539,7 @@ const sitemapEntries = [
   { path: "/", lastModified: latestPublishedAt },
   { path: "/news/", lastModified: latestPublishedAt },
   { path: "/about/", lastModified: aboutUpdatedAt },
+  { path: "/privacy/", lastModified: privacyUpdatedAt },
   ...posts.map((post) => ({
     path: `/news/${post.slug}/`,
     lastModified: post.publishedAt
@@ -533,6 +592,7 @@ Official dated updates: ${siteOrigin}/
 - PatinaHall Journal: ${marketplaceOrigin}/journal
 - Seller workspace: ${marketplaceOrigin}/seller/
 - Public roadmap: https://github.com/patinahall/patinahall.github.io/issues
+- Privacy choices: ${siteOrigin}/privacy/
 
 ## Product principles
 
