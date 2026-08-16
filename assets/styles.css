@@ -462,24 +462,90 @@ h3,
   min-height: 62vh;
 }
 
-.about-page > div,
 .not-found > div {
   width: min(100%, 760px);
 }
 
-.about-page h1,
+.about-intro {
+  width: min(100%, 980px);
+}
+
+.about-intro h1,
 .not-found h1 {
   margin: 0 0 32px;
   font-size: clamp(3.4rem, 8vw, 7rem);
   line-height: 0.94;
 }
 
-.about-page p,
+.about-intro__lede,
+.principle p,
+.about-publication p,
 .not-found p {
   color: var(--muted);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.25rem;
   line-height: 1.7;
+}
+
+.about-intro__lede {
+  max-width: 820px;
+  margin: 0;
+}
+
+.principles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: clamp(64px, 9vw, 112px);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.principle {
+  padding: clamp(32px, 5vw, 58px);
+  border-right: 1px solid var(--line);
+}
+
+.principle:last-child {
+  border-right: 0;
+}
+
+.principle__label {
+  margin: 0 0 52px;
+  color: var(--clay);
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.principle h2,
+.about-publication h2 {
+  margin: 0 0 28px;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1.02;
+}
+
+.principle p {
+  margin: 0 0 24px;
+}
+
+.principle__status {
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.principle__status strong {
+  color: var(--ink);
+}
+
+.about-publication {
+  width: min(100%, 760px);
+  padding-top: clamp(64px, 9vw, 112px);
+}
+
+.about-publication p {
+  margin: 0 0 24px;
 }
 
 .site-footer {
@@ -594,6 +660,28 @@ h3,
 
   .identity__list {
     grid-template-columns: 1fr;
+  }
+
+  .principles {
+    grid-template-columns: 1fr;
+  }
+
+  .principle {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .principle:last-child {
+    border-bottom: 0;
+  }
+
+  .about-intro h1,
+  .about-intro__lede,
+  .principle h2,
+  .principle p,
+  .about-publication h2,
+  .about-publication p {
+    overflow-wrap: anywhere;
   }
 
   .identity__list article {

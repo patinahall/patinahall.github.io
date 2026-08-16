@@ -14,6 +14,7 @@ const marketplaceOrigin = "https://patinahall.com";
 const siteName = "PatinaHall Updates";
 const siteDescription =
   "Official, dated updates from PatinaHall — a marketplace for vintage furniture, antiques, design objects, and independent stores.";
+const aboutUpdatedAt = "2026-08-16";
 const socialProfiles = Object.freeze([
   "https://www.linkedin.com/company/patinahall/",
   "https://www.instagram.com/patinahallcom/",
@@ -421,18 +422,38 @@ for (const post of posts) {
 
 const aboutBody = `
   <main class="about-page">
-    <div>
+    <header class="about-intro">
+      <p class="eyebrow">What we are building</p>
+      <h1>Two principles guide PatinaHall.</h1>
+      <p class="about-intro__lede">PatinaHall is a marketplace for vintage furniture, antiques, and design objects. We are building it around two practical commitments: less duplicate work for independent sellers, and a catalogue that rewards a buyer's attention.</p>
+    </header>
+    <section class="principles" aria-label="PatinaHall principles">
+      <article class="principle">
+        <p class="principle__label">01 · For store owners</p>
+        <h2>Another route to buyers, not another catalogue to babysit.</h2>
+        <p>Independent shops should not have to rebuild and maintain the same catalogue everywhere they sell. Our goal is zero duplicate catalogue maintenance: sellers keep working in the system they already use, while PatinaHall takes on the repetitive work needed to make those products discoverable in another place. Buyers continue to the original seller, so the shop keeps its own customer relationship.</p>
+        <p>That is both a product-design and an engineering problem. Routine work should happen quietly. Reviews, exceptions, and anything that changes what a buyer sees should stay clear and under the seller's control. Over time, we want one reliable product update to reach more relevant channels without copying titles, prices, availability, and photographs by hand.</p>
+        <p class="principle__status"><strong>What works today:</strong> supported Shopify stores can import an existing catalogue into a private PatinaHall workspace. Etsy connections and automatic two-way marketplace synchronisation are future work, not current features.</p>
+      </article>
+      <article class="principle">
+        <p class="principle__label">02 · For buyers</p>
+        <h2>A catalogue worth looking through.</h2>
+        <p>A marketplace should do more than aggregate inventory. Buyers should not have to sift through anonymous, mass-produced resale presented as distinctive design. PatinaHall is being built around interesting vintage furniture, antiques, and objects from independent dealers.</p>
+        <p>We prioritise sellers who source with judgement and can explain what they are offering—often people who travel through European markets, homes, and auctions and choose pieces themselves. Our public pilot begins with a Dutch independent store; as PatinaHall grows, we want to work with more small businesses across Europe and the United States.</p>
+        <p>Country of manufacture is not our shortcut for quality. What matters is whether a piece is considered, accurately described, and connected to a seller who knows it. When maker, date, condition, or provenance is uncertain, we would rather say so than invent certainty.</p>
+      </article>
+    </section>
+    <section class="about-publication" aria-labelledby="about-publication-title">
       <p class="eyebrow">About this publication</p>
-      <h1>The public record of what changed.</h1>
-      <p>PatinaHall Updates publishes short, dated notes about meaningful releases from PatinaHall, a marketplace for vintage furniture, antiques, design objects, and independent stores.</p>
-      <p>This publication does not mirror the catalogue or repeat buyer guides. Explore current pieces and Store pages on <a href="${marketplaceOrigin}/">patinahall.com</a>, read practical advice in <a href="${marketplaceOrigin}/guides">Guides</a>, and find longer stories in the <a href="${marketplaceOrigin}/journal">PatinaHall Journal</a>.</p>
-      <p>Product work that is suitable for public discussion is tracked in the <a href="https://github.com/patinahall/patinahall.github.io/issues">PatinaHall public roadmap on GitHub</a>.</p>
-    </div>
+      <h2 id="about-publication-title">The public record of what changed.</h2>
+      <p>PatinaHall Updates publishes short, dated notes about meaningful releases. It does not mirror the catalogue or repeat buyer guides.</p>
+      <p>Explore current pieces and Store pages on <a href="${marketplaceOrigin}/">patinahall.com</a>, read practical advice in <a href="${marketplaceOrigin}/guides">Guides</a>, find longer stories in the <a href="${marketplaceOrigin}/journal">PatinaHall Journal</a>, or follow product work suitable for public discussion in the <a href="https://github.com/patinahall/patinahall.github.io/issues">public roadmap on GitHub</a>.</p>
+    </section>
   </main>`;
 
 generated.push(["about/index.html", layout({
   title: "About · PatinaHall Updates",
-  description: "Learn what PatinaHall Updates publishes and how it relates to the PatinaHall marketplace, Guides, Journal, and public roadmap.",
+  description: "PatinaHall is guided by two principles: less catalogue maintenance for independent sellers and a more considered marketplace for buyers.",
   canonicalPath: "/about/",
   body: aboutBody,
   pageClass: "about"
@@ -459,7 +480,7 @@ const latestPublishedAt = posts[0].publishedAt;
 const sitemapEntries = [
   { path: "/", lastModified: latestPublishedAt },
   { path: "/news/", lastModified: latestPublishedAt },
-  { path: "/about/", lastModified: latestPublishedAt },
+  { path: "/about/", lastModified: aboutUpdatedAt },
   ...posts.map((post) => ({
     path: `/news/${post.slug}/`,
     lastModified: post.publishedAt
@@ -512,6 +533,11 @@ Official dated updates: ${siteOrigin}/
 - PatinaHall Journal: ${marketplaceOrigin}/journal
 - Seller workspace: ${marketplaceOrigin}/seller/
 - Public roadmap: https://github.com/patinahall/patinahall.github.io/issues
+
+## Product principles
+
+- For sellers: reduce duplicate catalogue maintenance and keep important decisions under seller control. Supported Shopify stores can import today; Etsy connections and automatic two-way marketplace synchronisation remain future work.
+- For buyers: favour considered vintage furniture, antiques, and design objects from independent dealers over anonymous mass-produced resale, while stating uncertainty about maker, date, condition, or provenance honestly.
 
 ## Publication boundary
 
