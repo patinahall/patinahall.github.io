@@ -828,14 +828,20 @@ h3,
 
   .site-header {
     min-height: 78px;
+    flex-wrap: wrap;
     gap: 18px;
+    padding: 14px 0;
   }
 
   .site-nav {
+    width: 100%;
     gap: 16px;
   }
 
   .site-nav__actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 6px;
   }
 
@@ -845,23 +851,23 @@ h3,
 
   .site-nav__primary,
   .site-nav__secondary {
-    min-width: 42px;
-    min-height: 42px;
-    padding: 0 10px;
+    min-width: 0;
+    min-height: 46px;
+    padding: 8px 10px;
     justify-content: center;
+    font-size: clamp(0.68rem, 3.2vw, 0.8rem);
+    text-align: center;
   }
 
   .site-nav__primary span,
   .site-nav__secondary span {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
   }
 
   .hero,

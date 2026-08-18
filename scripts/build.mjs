@@ -189,7 +189,7 @@ const navigation = `
     <nav class="site-nav" aria-label="Main navigation">
       <a href="/news/">Updates</a>
       <a href="/about/">About</a>
-      <div class="site-nav__actions" aria-label="PatinaHall destinations">
+      <div class="site-nav__actions" role="group" aria-label="PatinaHall destinations">
         <a class="site-nav__primary" href="${marketplaceOrigin}/catalog"><span>Browse the catalogue</span><b aria-hidden="true">↗</b></a>
         <a class="site-nav__secondary" href="${marketplaceOrigin}/seller/"><span>For store owners</span><b aria-hidden="true">↗</b></a>
       </div>
