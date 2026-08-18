@@ -3,6 +3,18 @@ import { readFileSync } from "node:fs";
 import vm from "node:vm";
 
 const source = readFileSync(new URL("../assets/navigation.js", import.meta.url), "utf8");
+const home = readFileSync(new URL("../index.html", import.meta.url), "utf8");
+const styles = readFileSync(new URL("../assets/styles.css", import.meta.url), "utf8");
+
+assert.match(home, /class="destination-gateway"/u);
+assert.match(home, />Browse the catalogue</u);
+assert.match(home, />For store owners</u);
+assert.doesNotMatch(
+  home.match(/<header class="site-header"[\s\S]*?<\/header>/u)?.[0] ?? "",
+  /Browse the catalogue|For store owners/u
+);
+assert.match(styles, /\.destination-gateway\s*\{/u);
+assert.match(styles, /@media \(max-width: 760px\)[\s\S]*\.destination-gateway\s*\{[\s\S]*grid-template-columns: 1fr;/u);
 
 const createHarness = ({ reduceMotion = false } = {}) => {
   const classes = new Set();

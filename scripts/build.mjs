@@ -189,12 +189,24 @@ const navigation = `
     <nav class="site-nav" aria-label="Main navigation">
       <a href="/news/">Updates</a>
       <a href="/about/">About</a>
-      <div class="site-nav__actions" role="group" aria-label="PatinaHall destinations">
-        <a class="site-nav__primary" href="${marketplaceOrigin}/catalog"><span>Browse the catalogue</span><b aria-hidden="true">↗</b></a>
-        <a class="site-nav__secondary" href="${marketplaceOrigin}/seller/"><span>For store owners</span><b aria-hidden="true">↗</b></a>
-      </div>
     </nav>
   </header>`;
+
+const destinationGateway = `
+  <nav class="destination-gateway" aria-label="Choose your PatinaHall destination">
+    <a href="${marketplaceOrigin}/catalog">
+      <span class="destination-gateway__eyebrow">For buyers</span>
+      <strong>Browse the catalogue</strong>
+      <span>Discover vintage furniture, antiques and design objects.</span>
+      <b aria-hidden="true">↗</b>
+    </a>
+    <a href="${marketplaceOrigin}/seller/">
+      <span class="destination-gateway__eyebrow">For independent stores</span>
+      <strong>For store owners</strong>
+      <span>Bring your existing catalogue into PatinaHall.</span>
+      <b aria-hidden="true">↗</b>
+    </a>
+  </nav>`;
 
 const analyticsConsent = `
   <aside class="analytics-consent" data-analytics-consent-panel hidden aria-label="Privacy choices">
@@ -266,6 +278,7 @@ const layout = ({ title, description, canonicalPath, body, pageClass = "", struc
 </head>
 <body class="${escapeHtml(pageClass)}">
 ${navigation}
+${destinationGateway}
 ${body}
 ${footer}
 ${analyticsConsent}
@@ -292,10 +305,6 @@ const homeBody = `
       <div class="hero__note">
         <p>PatinaHall brings vintage furniture, antiques, and design objects from independent stores into one calm, current catalogue.</p>
         <p>Buyers discover pieces on PatinaHall and continue to the original seller.</p>
-        <div class="hero__actions">
-          <a href="${marketplaceOrigin}/catalog">Browse the catalogue <span aria-hidden="true">→</span></a>
-          <a href="${marketplaceOrigin}/seller/">For store owners <span aria-hidden="true">↗</span></a>
-        </div>
       </div>
     </section>
     <section class="latest" aria-labelledby="latest-title">
