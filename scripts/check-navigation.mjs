@@ -2,84 +2,100 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import vm from "node:vm";
 
-const source = readFileSync(new URL("../assets/navigation.js", import.meta.url), "utf8");
+const source = readFileSync(
+  new URL("../assets/navigation.js", import.meta.url),
+  "utf8"
+);
 const home = readFileSync(new URL("../index.html", import.meta.url), "utf8");
-const styles = readFileSync(new URL("../assets/styles.css", import.meta.url), "utf8");
+const styles = readFileSync(
+  new URL("../assets/styles.css", import.meta.url),
+  "utf8"
+);
+const headerMarkup = home.match(
+  /<header class="site-header"[\s\S]*?<\/header>/u
+)?.[0] ?? "";
 
-assert.match(home, /class="destination-gateway"/u);
+assert.match(home, /class="destination-gateway" data-destination-gateway/u);
 assert.match(home, />Browse the catalogue</u);
 assert.match(home, />For store owners</u);
-assert.doesNotMatch(
-  home.match(/<header class="site-header"[\s\S]*?<\/header>/u)?.[0] ?? "",
-  /Browse the catalogue|For store owners/u
+assert.match(headerMarkup, /data-header-primary/u);
+assert.match(headerMarkup, /data-header-destinations/u);
+assert.match(headerMarkup, />Browse catalogue/u);
+assert.match(styles, /\.site-header__inner\s*\{/u);
+assert.match(styles, /\.site-header--destinations \.site-header__destinations/u);
+assert.match(
+  styles,
+  /@media \(max-width: 760px\)[\s\S]*\.destination-gateway\s*\{[\s\S]*grid-template-columns: 1fr;/u
 );
-assert.match(styles, /\.destination-gateway\s*\{/u);
-assert.match(styles, /@media \(max-width: 760px\)[\s\S]*\.destination-gateway\s*\{[\s\S]*grid-template-columns: 1fr;/u);
 
-const createHarness = ({ reduceMotion = false } = {}) => {
-  const classes = new Set();
-  const headerListeners = new Map();
-  const windowListeners = new Map();
-  const header = {
-    classList: {
-      add: (value) => classes.add(value),
-      remove: (value) => classes.delete(value)
-    },
-    contains: (value) => value === header
-  };
-  const documentObject = {
-    activeElement: null,
-    querySelector: () => header
-  };
-  header.addEventListener = (name, listener) => headerListeners.set(name, listener);
-  let animationFrame;
-  const windowObject = {
-    scrollY: 0,
-    addEventListener: (name, listener) => windowListeners.set(name, listener),
-    matchMedia: () => ({ matches: reduceMotion }),
-    requestAnimationFrame: (listener) => {
-      animationFrame = listener;
-    }
-  };
-  vm.runInNewContext(source, {
-    document: documentObject,
-    window: windowObject
-  });
-  const scrollTo = (value) => {
-    windowObject.scrollY = value;
-    windowListeners.get("scroll")?.();
-    const listener = animationFrame;
-    animationFrame = undefined;
-    listener?.();
-  };
-  return {
-    classes,
-    documentObject,
-    header,
-    headerListeners,
-    scrollTo,
-    windowListeners
-  };
+const classes = new Set();
+const windowListeners = new Map();
+const attributes = new Map();
+const header = {
+  classList: {
+    toggle: (value, enabled) => enabled
+      ? classes.add(value)
+      : classes.delete(value)
+  },
+  getBoundingClientRect: () => ({ bottom: 92 })
+};
+const gatewayRect = { bottom: 280 };
+const gateway = {
+  getBoundingClientRect: () => gatewayRect
+};
+const primaryNavigation = {
+  inert: false,
+  setAttribute: (name, value) => attributes.set(`primary:${name}`, value)
+};
+const destinationNavigation = {
+  inert: false,
+  setAttribute: (name, value) => attributes.set(`destinations:${name}`, value)
+};
+const elements = new Map([
+  ["[data-scroll-header]", header],
+  ["[data-destination-gateway]", gateway],
+  ["[data-header-primary]", primaryNavigation],
+  ["[data-header-destinations]", destinationNavigation]
+]);
+let animationFrame;
+const windowObject = {
+  addEventListener: (name, listener) => windowListeners.set(name, listener),
+  requestAnimationFrame: (listener) => {
+    animationFrame = listener;
+  }
 };
 
-const navigation = createHarness();
-for (const value of [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36]) {
-  navigation.scrollTo(value);
-}
-assert.equal(navigation.classes.has("site-header--hidden"), true);
+vm.runInNewContext(source, {
+  document: {
+    querySelector: (selector) => elements.get(selector) ?? null
+  },
+  window: windowObject
+});
 
-for (const value of [33, 30, 27]) navigation.scrollTo(value);
-assert.equal(navigation.classes.has("site-header--hidden"), false);
+const runFrame = () => {
+  const listener = animationFrame;
+  animationFrame = undefined;
+  listener?.();
+};
 
-navigation.documentObject.activeElement = navigation.header;
-navigation.scrollTo(60);
-assert.equal(navigation.classes.has("site-header--hidden"), false);
+runFrame();
+assert.equal(classes.has("site-header--destinations"), false);
+assert.equal(destinationNavigation.inert, true);
 
-navigation.classes.add("site-header--hidden");
-navigation.headerListeners.get("focusin")?.();
-assert.equal(navigation.classes.has("site-header--hidden"), false);
+gatewayRect.bottom = 80;
+windowListeners.get("scroll")?.();
+runFrame();
+assert.equal(classes.has("site-header--destinations"), true);
+assert.equal(primaryNavigation.inert, true);
+assert.equal(destinationNavigation.inert, false);
+assert.equal(attributes.get("primary:aria-hidden"), "true");
+assert.equal(attributes.get("destinations:aria-hidden"), "false");
 
-const reducedMotionNavigation = createHarness({ reduceMotion: true });
-assert.equal(reducedMotionNavigation.windowListeners.has("scroll"), false);
+gatewayRect.bottom = 180;
+windowListeners.get("resize")?.();
+runFrame();
+assert.equal(classes.has("site-header--destinations"), false);
+assert.equal(primaryNavigation.inert, false);
+assert.equal(destinationNavigation.inert, true);
 
-process.stdout.write("Verified scroll-aware PatinaHall Updates navigation.\n");
+process.stdout.write("Verified morphing PatinaHall Updates navigation.\n");

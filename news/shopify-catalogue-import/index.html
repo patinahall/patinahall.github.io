@@ -30,17 +30,25 @@
 <body class="article-page">
 
   <header class="site-header" data-scroll-header>
-    <a class="brand" href="/" aria-label="PatinaHall Updates home">
-      <span class="brand__mark" aria-hidden="true"></span>
-      <span>PATINAHALL UPDATES</span>
-    </a>
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="/news/">Updates</a>
-      <a href="/about/">About</a>
-    </nav>
+    <div class="site-header__inner">
+      <a class="brand" href="/" aria-label="PatinaHall Updates home">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span>PATINAHALL UPDATES</span>
+      </a>
+      <div class="site-header__navigation">
+        <nav class="site-nav" data-header-primary aria-label="Main navigation">
+          <a href="/news/">Updates</a>
+          <a href="/about/">About</a>
+        </nav>
+        <nav class="site-header__destinations" data-header-destinations aria-label="PatinaHall destinations" aria-hidden="true">
+          <a href="https://patinahall.com/catalog">Browse catalogue <b aria-hidden="true">↗</b></a>
+          <a href="https://patinahall.com/seller/">For store owners <b aria-hidden="true">↗</b></a>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <nav class="destination-gateway" aria-label="Choose your PatinaHall destination">
+  <nav class="destination-gateway" data-destination-gateway aria-label="Choose your PatinaHall destination">
     <a href="https://patinahall.com/catalog">
       <span class="destination-gateway__eyebrow">For buyers</span>
       <strong>Browse the catalogue</strong>

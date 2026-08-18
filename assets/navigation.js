@@ -1,45 +1,49 @@
 (function (windowObject, documentObject) {
   "use strict";
+
   var header = documentObject.querySelector("[data-scroll-header]");
-  if (header === null) return;
-  var reduceMotion = windowObject.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var lastScrollY = windowObject.scrollY;
-  var accumulatedTravel = 0;
-  var lastDirection = 0;
+  var gateway = documentObject.querySelector("[data-destination-gateway]");
+  var primaryNavigation = documentObject.querySelector("[data-header-primary]");
+  var destinationNavigation = documentObject.querySelector(
+    "[data-header-destinations]"
+  );
+
+  if (header === null
+    || gateway === null
+    || primaryNavigation === null
+    || destinationNavigation === null) {
+    return;
+  }
+
   var ticking = false;
-  var revealHeader = function () {
-    header.classList.remove("site-header--hidden");
-    header.classList.add("site-header--revealed");
+  var destinationsVisible = null;
+
+  var render = function (showDestinations) {
+    if (showDestinations === destinationsVisible) return;
+    destinationsVisible = showDestinations;
+    header.classList.toggle("site-header--destinations", showDestinations);
+    primaryNavigation.inert = showDestinations;
+    destinationNavigation.inert = !showDestinations;
+    primaryNavigation.setAttribute("aria-hidden", String(showDestinations));
+    destinationNavigation.setAttribute("aria-hidden", String(!showDestinations));
   };
+
   var updateHeader = function () {
-    var currentScrollY = windowObject.scrollY;
-    var delta = currentScrollY - lastScrollY;
-    var direction = delta === 0 ? lastDirection : delta > 0 ? 1 : -1;
-    if (direction !== lastDirection) accumulatedTravel = 0;
-    accumulatedTravel += Math.abs(delta);
-    var headerHasFocus = header.contains(documentObject.activeElement);
-    if (currentScrollY <= 24 || headerHasFocus) {
-      revealHeader();
-      accumulatedTravel = 0;
-    } else if (direction < 0 && accumulatedTravel >= 8) {
-      revealHeader();
-      accumulatedTravel = 0;
-    } else if (direction > 0 && accumulatedTravel >= 12) {
-      header.classList.add("site-header--hidden");
-      header.classList.remove("site-header--revealed");
-      accumulatedTravel = 0;
-    }
-    lastScrollY = currentScrollY;
-    lastDirection = direction;
+    render(
+      gateway.getBoundingClientRect().bottom
+        <= header.getBoundingClientRect().bottom
+    );
     ticking = false;
   };
-  header.addEventListener("focusin", revealHeader);
-  if (!reduceMotion) {
-    windowObject.addEventListener("scroll", function () {
-      if (!ticking) {
-        windowObject.requestAnimationFrame(updateHeader);
-        ticking = true;
-      }
-    }, { passive: true });
-  }
+
+  var scheduleUpdate = function () {
+    if (ticking) return;
+    windowObject.requestAnimationFrame(updateHeader);
+    ticking = true;
+  };
+
+  destinationNavigation.inert = true;
+  windowObject.addEventListener("scroll", scheduleUpdate, { passive: true });
+  windowObject.addEventListener("resize", scheduleUpdate);
+  scheduleUpdate();
 })(window, document);
