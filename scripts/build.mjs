@@ -181,7 +181,7 @@ const formatDate = (date) => new Intl.DateTimeFormat("en-GB", {
 }).format(new Date(`${date}T12:00:00Z`));
 
 const navigation = `
-  <header class="site-header">
+  <header class="site-header" data-scroll-header>
     <a class="brand" href="/" aria-label="PatinaHall Updates home">
       <span class="brand__mark" aria-hidden="true"></span>
       <span>PATINAHALL UPDATES</span>
@@ -189,7 +189,10 @@ const navigation = `
     <nav class="site-nav" aria-label="Main navigation">
       <a href="/news/">Updates</a>
       <a href="/about/">About</a>
-      <a class="site-nav__primary" href="${marketplaceOrigin}/"><span>Explore PatinaHall</span><b aria-hidden="true">↗</b></a>
+      <div class="site-nav__actions" aria-label="PatinaHall destinations">
+        <a class="site-nav__primary" href="${marketplaceOrigin}/catalog"><span>Browse the catalogue</span><b aria-hidden="true">↗</b></a>
+        <a class="site-nav__secondary" href="${marketplaceOrigin}/seller/"><span>For store owners</span><b aria-hidden="true">↗</b></a>
+      </div>
     </nav>
   </header>`;
 
@@ -247,6 +250,7 @@ const layout = ({ title, description, canonicalPath, body, pageClass = "", struc
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="stylesheet" href="/assets/styles.css">
+  <script src="/assets/navigation.js" defer></script>
   <meta property="og:site_name" content="PatinaHall Updates">
   <meta property="og:type" content="${structuredData?.["@type"] === "NewsArticle" ? "article" : "website"}">
   <meta property="og:title" content="${escapeHtml(title)}">
