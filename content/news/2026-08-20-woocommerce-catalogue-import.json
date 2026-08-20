@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "slug": "woocommerce-catalogue-import",
+  "title": "PatinaHall can now prepare WooCommerce catalogues",
+  "description": "Vintage furniture and antiques shops using WooCommerce can now bring their existing catalogue into a private PatinaHall workspace and keep product updates under their control.",
+  "publishedAt": "2026-08-20",
+  "label": "Seller update",
+  "sections": [
+    {
+      "heading": "Less catalogue work, more time for the store",
+      "paragraphs": [
+        "Independent store owners should not have to maintain the same catalogue in two places. PatinaHall can now recognise a supported WooCommerce store and prepare its published products inside the seller's private workspace.",
+        "Titles, descriptions, categories, prices, stock signals, and product links can be brought in from the shop that already owns them, reducing repetitive setup while the original WooCommerce store remains the source."
+      ]
+    },
+    {
+      "heading": "Start with the store address",
+      "paragraphs": [
+        "A store owner starts with the public website customers already use. For supported WooCommerce stores, PatinaHall uses the public Store API, so there is no plugin to install and no API key to share.",
+        "The catalogue is prepared in the background. The owner can leave the page, return later, and review what PatinaHall found."
+      ]
+    },
+    {
+      "heading": "Updates stay in the owner's hands",
+      "paragraphs": [
+        "Connecting a store address does not publish products. The prepared catalogue stays private until the owner chooses which products to add and completes the normal review for anything that will be shown to buyers.",
+        "When the WooCommerce catalogue changes, the owner can pull fresh data, review new or changed products, and decide what PatinaHall should add or update. The aim is simple: spend less time copying catalogue data and more time finding pieces, helping customers, and running the store."
+      ]
+    }
+  ],
+  "callToAction": {
+    "label": "Open the seller workspace",
+    "href": "https://patinahall.com/seller/"
+  }
+}

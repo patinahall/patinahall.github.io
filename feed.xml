@@ -7,6 +7,13 @@
     <language>en</language>
     <atom:link href="https://patinahall.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>PatinaHall can now prepare WooCommerce catalogues</title>
+      <link>https://patinahall.github.io/news/woocommerce-catalogue-import/</link>
+      <guid isPermaLink="true">https://patinahall.github.io/news/woocommerce-catalogue-import/</guid>
+      <pubDate>Thu, 20 Aug 2026 12:00:00 GMT</pubDate>
+      <description>Vintage furniture and antiques shops using WooCommerce can now bring their existing catalogue into a private PatinaHall workspace and keep product updates under their control.</description>
+    </item>
+    <item>
       <title>PatinaHall can now prepare Shopify catalogues</title>
       <link>https://patinahall.github.io/news/shopify-catalogue-import/</link>
       <guid isPermaLink="true">https://patinahall.github.io/news/shopify-catalogue-import/</guid>
