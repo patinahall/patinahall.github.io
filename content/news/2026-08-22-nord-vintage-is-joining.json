@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "slug": "nord-vintage-is-joining",
+  "title": "Nord Vintage is joining PatinaHall",
+  "description": "We are delighted to welcome Nord Vintage, whose collection is shaped by travelling, looking closely, and choosing vintage pieces one at a time.",
+  "publishedAt": "2026-08-22",
+  "label": "Store update",
+  "sections": [
+    {
+      "paragraphs": [
+        "PatinaHall focuses on independent vintage stores whose collections are built in person, not assembled from a generic catalogue. We look for people who travel, search, and choose pieces one by one—so we are genuinely happy that Nord Vintage is joining us.",
+        "Nord Vintage has agreed to join PatinaHall as an early Store. Onboarding now begins privately, with the collection staying under the Store's control while it is prepared and reviewed."
+      ]
+    },
+    {
+      "heading": "A collection shaped by personal choice",
+      "paragraphs": [
+        "Finding vintage furniture takes time. It means visiting new places, looking closely, asking questions, and recognising the character in an object that someone else might pass by.",
+        "Nord Vintage brings that personal judgement to its collection. The pieces are found and selected by people who care about what they bring home and offer to others. That is exactly the kind of Store PatinaHall was created to support."
+      ]
+    },
+    {
+      "heading": "Helping good pieces travel further",
+      "paragraphs": [
+        "PatinaHall's role is not to turn a considered collection into anonymous inventory. It is to help each piece keep its identity while making it easier to discover.",
+        "Once the catalogue has been prepared and reviewed, people in different countries will have a simpler way to encounter Nord Vintage's pieces on PatinaHall and continue to the Store when something feels right."
+      ]
+    },
+    {
+      "heading": "What happens next",
+      "paragraphs": [
+        "Nord Vintage's catalogue will be prepared privately first. Nothing will become public automatically; the Store will review what PatinaHall found and decide what should be shown to buyers.",
+        "We are excited not simply because another Store is joining, but because Nord Vintage represents the people we hoped to meet: independent sellers who go out, find remarkable objects, and choose them with care. Soon, those finds will have a wider path to their next home."
+      ]
+    }
+  ],
+  "callToAction": {
+    "label": "Explore stores on PatinaHall",
+    "href": "https://patinahall.com/stores"
+  }
+}
