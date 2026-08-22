@@ -27,11 +27,61 @@ claims, or rewritten copies of content already published on PatinaHall.
 
 ## Publishing
 
-1. Add one validated JSON document under `content/news/`.
-2. Run `npm run build`.
-3. Review the generated homepage, archive, article, privacy page, feed,
-   sitemap, and `llms.txt`.
-4. Run `npm run check` and commit both the source and generated pages.
+The canonical local clone is the sibling `../patinahall.github.io` directory
+when working from the PatinaHall marketplace workspace. Reuse that clone; do
+not create a temporary clone for an ordinary update.
+
+Before changing it:
+
+1. Confirm the worktree is clean or identify and preserve every existing
+   change.
+2. Confirm `origin` is
+   `https://github.com/patinahall/patinahall.github.io.git` for fetch and push.
+3. Confirm GitHub CLI is authenticated as the `patinahall` account. Stop if it
+   is not; do not fall back to the engineering repository's SSH identity.
+4. Fetch `origin/main` and fast-forward the clean local `main` before editing.
+
+To publish one update:
+
+1. Add one validated JSON document under `content/news/`. Use the current
+   Europe/Amsterdam publication date and choose the permanent slug carefully.
+2. Keep the required call to action on `https://patinahall.com/`. If a Store
+   has no reviewed public destination yet, use an honest general PatinaHall
+   destination instead of adding an unreviewed external link or changing the
+   editorial-origin allowlist for one announcement.
+3. Run `npm run build` once.
+4. Review the generated homepage, archive, article, privacy page, feed,
+   sitemap, and `llms.txt`. Confirm the source and generated article say what
+   changed, who benefits, and where the reader can go now.
+5. Run `npm run check` and `git diff --check`.
+6. Commit the source JSON and every generated page changed by that build in
+   one commit, then push `main` through the HTTPS `origin`.
+7. Read the latest GitHub Pages build and confirm it reached `built` for the
+   pushed commit. Then perform one bounded live check of the article URL, its
+   homepage card, feed entry, and sitemap entry.
+
+Typical command sequence from the marketplace workspace:
+
+```sh
+cd ../patinahall.github.io
+gh auth status
+git remote -v
+git status --short --branch
+git fetch origin main
+git merge --ff-only origin/main
+
+# Add or edit content/news/YYYY-MM-DD-permanent-slug.json.
+npm run build
+npm run check
+git diff --check
+
+# Review and stage the exact source and generated files before committing.
+git push origin main
+gh api repos/patinahall/patinahall.github.io/pages/builds/latest
+```
+
+GitHub Pages publishes directly from the repository root after `main` is
+pushed. There is no separate deploy command and no CloudFront invalidation.
 
 Article slugs are permanent public URLs and should not be renamed after
 publication. The site is dependency-free and is served directly by GitHub
