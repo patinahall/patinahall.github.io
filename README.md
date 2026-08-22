@@ -31,34 +31,24 @@ The canonical local clone is the sibling `../patinahall.github.io` directory
 when working from the PatinaHall marketplace workspace. Reuse that clone; do
 not create a temporary clone for an ordinary update.
 
-Before changing it:
-
-1. Confirm the worktree is clean or identify and preserve every existing
-   change.
-2. Confirm `origin` is
-   `https://github.com/patinahall/patinahall.github.io.git` for fetch and push.
-3. Confirm GitHub CLI is authenticated as the `patinahall` account. Stop if it
-   is not; do not fall back to the engineering repository's SSH identity.
-4. Fetch `origin/main` and fast-forward the clean local `main` before editing.
-
 To publish one update:
 
-1. Add one validated JSON document under `content/news/`. Use the current
-   Europe/Amsterdam publication date and choose the permanent slug carefully.
-2. Keep the required call to action on `https://patinahall.com/`. If a Store
+1. Confirm the worktree is clean or identify and preserve existing changes.
+   Use the HTTPS `origin` and the `patinahall` GitHub account; do not fall back
+   to the engineering repository's SSH identity.
+2. Fetch `origin/main` and fast-forward the clean local `main`.
+3. Add one validated JSON document under `content/news/`. Use the current
+   Europe/Amsterdam date and choose the permanent slug carefully.
+4. Keep the required call to action on `https://patinahall.com/`. If a Store
    has no reviewed public destination yet, use an honest general PatinaHall
-   destination instead of adding an unreviewed external link or changing the
-   editorial-origin allowlist for one announcement.
-3. Run `npm run build` once.
-4. Review the generated homepage, archive, article, privacy page, feed,
-   sitemap, and `llms.txt`. Confirm the source and generated article say what
-   changed, who benefits, and where the reader can go now.
-5. Run `npm run check` and `git diff --check`.
-6. Commit the source JSON and every generated page changed by that build in
-   one commit, then push `main` through the HTTPS `origin`.
-7. Read the latest GitHub Pages build and confirm it reached `built` for the
-   pushed commit. Then perform one bounded live check of the article URL, its
-   homepage card, feed entry, and sitemap entry.
+   destination rather than an unreviewed external link.
+5. Run `npm run build`, then review the generated homepage, archive, article,
+   privacy page, feed, sitemap, and `llms.txt`.
+6. Run `npm run check` and `git diff --check`.
+7. Commit the source JSON and every generated page from the same build, then
+   push `main`.
+8. Confirm the GitHub Pages build reached `built` for that commit. Check the
+   live article, homepage card, feed entry, and sitemap entry once.
 
 Typical command sequence from the marketplace workspace:
 
@@ -75,40 +65,23 @@ npm run build
 npm run check
 git diff --check
 
-# Review and stage the exact source and generated files before committing.
+# Replace these example paths, then stage every reviewed path from git status.
+git add path/to/reviewed-source.json path/to/generated-page.html
+git commit -m "Publish subject update"
 git push origin main
 gh api repos/patinahall/patinahall.github.io/pages/builds/latest
 ```
 
 GitHub Pages publishes directly from the repository root after `main` is
-pushed. There is no separate deploy command and no CloudFront invalidation.
+pushed. There is no separate deploy command.
 
 Article slugs are permanent public URLs and should not be renamed after
 publication. The site is dependency-free and is served directly by GitHub
 Pages from the repository root.
 
-## Optional analytics
+## Privacy and analytics
 
-The site uses the same Google Analytics 4 web stream as `patinahall.com` via
-Google Tag Manager container `GTM-K4GWHP6J`; the current GA4 measurement ID is
-`G-2SNNEES0DF`. Google remains absent from the network until a visitor chooses
-`Allow all`. Advertising, advertising user data, advertising
-personalisation, optional functionality storage, and personalisation storage
-remain denied. The standard no-JavaScript GTM iframe is deliberately absent.
-
-The versioned browser choice stops being accepted after 180 days and can be
-reopened from the ordinary footer. Because browser storage is origin-scoped,
-the Updates choice is separate from the choice stored on `patinahall.com`.
-Withdrawing consent stops future GTM loading after reload; it does not delete
-Google cookies or data already received by Google.
-
-Cross-domain measurement is an external GA4 web-stream setting, not a
-repository setting. It should include the exact domains `patinahall.com` and
-`patinahall.github.io` so a consented linked journey can retain one user and
-session.
-
-Before a release that relies on GTM, inspect the published container without
-executing it. The 2026-08-16 review found a 343,616-byte response with SHA-256
-`5c3a319aaf62d96bd98495d27f3610f02179de313fcdfbb357b3d85a3d2a48fc`:
-one configured `__googtag` resource for `G-2SNNEES0DF`, firing on `gtm.init`,
-and no configured advertising destination ID.
+The site works without analytics. Optional analytics loads only after a
+visitor chooses `Allow all`; advertising and personalisation remain disabled.
+The user-facing contract is on the [Privacy page](https://patinahall.github.io/privacy/),
+and `npm run check` verifies the consent boundary before publication.
