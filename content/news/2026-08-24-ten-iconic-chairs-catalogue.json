@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "slug": "ten-iconic-chairs-catalogue",
+  "title": "Ten iconic chairs are coming to the PatinaHall catalogue",
+  "description": "PatinaHall is building a researched catalogue of iconic vintage and mid-century furniture, beginning with ten chairs and 70 years of design history.",
+  "publishedAt": "2026-08-24",
+  "label": "Catalogue update",
+  "sections": [
+    {
+      "paragraphs": [
+        "We’re building a PatinaHall catalogue of iconic vintage and mid-century furniture: a lasting reference for the objects people search for, collect, restore, and want to understand.",
+        "We’re starting with ten chairs: Hans J. Wegner’s CH24 Wishbone and CH07 Shell Chair; Finn Juhl’s Chieftain; Arne Jacobsen’s Egg Chair and Series 7; Verner Panton’s Panton Chair; Charles and Ray Eames’ Lounge Chair; Poul Kjærholm’s PK22; Børge Mogensen’s Spanish Chair; and Eero Saarinen’s Tulip Chair.",
+        "Basically: ten chairs, 70 years of design history, and at least 400 arguments about who made what first."
+      ]
+    },
+    {
+      "heading": "What we’ll collect",
+      "paragraphs": [
+        "For each object, we’ll bring together its history, makers, materials, production details, and the clues that help people identify the real thing. The catalogue will be a reference in its own right, whether or not an example is currently for sale.",
+        "The first ten are coming soon. After that, we’ll see how deep the chair rabbit hole goes."
+      ]
+    }
+  ],
+  "callToAction": {
+    "label": "Explore the Furniture Library",
+    "href": "https://patinahall.com/furniture-library"
+  }
+}
