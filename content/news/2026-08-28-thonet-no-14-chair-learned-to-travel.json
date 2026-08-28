@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "slug": "thonet-no-14-chair-learned-to-travel",
+  "title": "How Thonet Chair No. 14 learned to travel",
+  "description": "A new PatinaHall Furniture Library story explains how bent beech, six wooden parts and compact shipping turned an 1859 café chair into a global design.",
+  "publishedAt": "2026-08-28",
+  "label": "Library update",
+  "image": {
+    "url": "https://patinahall.github.io/assets/media/thonet-no-14-daderot-9acbbe978b75a6d3.jpg",
+    "alt": "A circa-1920 Thonet Chair No. 14 museum example with a bent beech loop back, slender legs and woven cane seat.",
+    "width": 1333,
+    "height": 2000
+  },
+  "sections": [
+    {
+      "paragraphs": [
+        "PatinaHall has published a new Furniture Library story about Thonet Chair No. 14—not simply as a familiar outline, but as a small manufacturing and distribution system.",
+        "Designed in 1859, the chair brought steam-bent beech, six wooden parts, ten screws and two nuts into one repeatable object. Its fame belongs as much to what happened before assembly as to what happened in the café."
+      ]
+    },
+    {
+      "heading": "The clever part was partly empty space",
+      "paragraphs": [
+        "A finished chair occupies a surprising amount of air. Thonet delayed assembly so components could travel compactly; one documented packing claim puts 36 disassembled chairs into a cubic metre. The wood travelled first. The chair-shaped air could be added on arrival.",
+        "That made No. 14 easier to produce, ship, replace and distribute at scale. The article follows how material, hardware and logistics became one design decision."
+      ]
+    },
+    {
+      "heading": "A design date is not a chair's birthday",
+      "paragraphs": [
+        "The page also keeps the permanent 1859 design separate from later physical examples photographed in museums. A chair made in 1881 or around 1920 can document the design without somehow travelling backwards through time.",
+        "Read the full record for the construction, historical examples and evidence behind the chair that learned to travel."
+      ]
+    }
+  ],
+  "callToAction": {
+    "label": "Read the Thonet No. 14 story",
+    "href": "https://patinahall.com/furniture-library/designs/thonet-no-14-chair"
+  },
+  "relatedLinks": [
+    {
+      "label": "Explore the Furniture Library",
+      "href": "https://patinahall.com/furniture-library"
+    }
+  ]
+}

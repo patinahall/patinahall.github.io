@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "slug": "cabinet-59108-luxury-follows-the-eye",
+  "title": "Cabinet 59.108: when luxury follows the eye",
+  "description": "A new PatinaHall artefact story looks at one cabinet from around 1700 and the precise places where its workshop spent, saved and impressed.",
+  "publishedAt": "2026-08-28",
+  "label": "Library update",
+  "image": {
+    "url": "https://patinahall.github.io/assets/media/marquetry-boulle-cabinet-e3bc4b6258d3da8a.jpg",
+    "alt": "A tall cabinet attributed to André-Charles Boulle, covered with brass and tortoiseshell marquetry and gilt-bronze mounts.",
+    "width": 1411,
+    "height": 2000
+  },
+  "sections": [
+    {
+      "paragraphs": [
+        "PatinaHall has published a new Furniture Library story about Metropolitan Museum object 59.108: one physical cabinet made in Paris around 1700 and attributed, rather than definitively assigned, to André-Charles Boulle.",
+        "At 233 centimetres high, it does not merely occupy a room. It begins negotiations with the ceiling."
+      ]
+    },
+    {
+      "heading": "Extravagance, carefully budgeted",
+      "paragraphs": [
+        "The cabinet concentrates precious material and finer bronze finishing where a viewer is likely to see them. Above the usual sightline and behind closed doors, the workshop used more economical substitutes. Baroque spectacle, it turns out, could still keep an eye on the invoice.",
+        "Paired cutting also let one demanding sawn pattern produce two reversed marquetry arrangements. The missing or unidentified companion suggested by that process becomes part of the object's story."
+      ]
+    },
+    {
+      "heading": "Large, lavish and quicker to take apart than it looks",
+      "paragraphs": [
+        "The Met reports that the cabinet can be dismantled in roughly 15 to 20 minutes. The monumentality was a visual effect; underneath it remained a piece of furniture designed to move.",
+        "The full article follows its qualified attribution, construction, workshop economy and conservation history while keeping this particular museum object distinct from the general technique of marquetry."
+      ]
+    }
+  ],
+  "callToAction": {
+    "label": "Read the cabinet 59.108 story",
+    "href": "https://patinahall.com/furniture-library/designs/boulle-cabinet-59108"
+  },
+  "relatedLinks": [
+    {
+      "label": "How marquetry becomes a picture",
+      "href": "https://patinahall.com/furniture-library/designs/marquetry"
+    },
+    {
+      "label": "Explore the Furniture Library",
+      "href": "https://patinahall.com/furniture-library"
+    }
+  ]
+}
