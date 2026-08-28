@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "guides-for-finding-vintage-furniture",
+  "title": "PatinaHall Guides: a field manual for finding vintage furniture",
+  "description": "PatinaHall Guides now brings practical advice for inspecting, measuring and choosing one-off vintage furniture into one clearer buyer journey.",
+  "publishedAt": "2026-08-29",
+  "label": "Buyer update",
+  "sections": [
+    {
+      "paragraphs": [
+        "PatinaHall Guides now has a clearer job: help people understand one-off vintage furniture before they speak to the seller, arrange delivery or bring a piece home.",
+        "A new Start here guide maps the whole decision. From there, readers can follow practical paths for inspecting and understanding a piece, or for measuring, fitting and using it in a real room."
+      ]
+    },
+    {
+      "heading": "Useful questions, not perfect furniture",
+      "paragraphs": [
+        "Vintage furniture may carry scuffs, fading, replaced parts, old repairs and an incomplete history. The Guides help separate ordinary age from active problems and unknown facts, then turn those observations into better questions for the independent seller.",
+        "The section covers photographs and evidence, condition and materials, room and delivery measurements, dining furniture, storage and vintage lighting. Future additions will follow the same buyer-first approach rather than repeat subjects under new titles."
+      ]
+    },
+    {
+      "heading": "Two expanded field guides",
+      "paragraphs": [
+        "The delivery guide now follows the complete route, including the object, packaging, doors, turns, stairs, lifts and final position. The dining-chair guide looks at the complete set, its relationship with the actual table, comfort, variation and likely work — not only the best-looking chair in the photograph.",
+        "Each guide is designed to be useful while comparing a real piece, with clear actions, honest limits and visual explanations where words alone are not enough."
+      ]
+    }
+  ],
+  "callToAction": {
+    "label": "Explore PatinaHall Guides",
+    "href": "https://patinahall.com/guides"
+  },
+  "relatedLinks": [
+    {
+      "label": "Measure furniture for delivery",
+      "href": "https://patinahall.com/guides/measuring-furniture-for-home"
+    },
+    {
+      "label": "Choose vintage dining chairs",
+      "href": "https://patinahall.com/guides/choosing-vintage-dining-chairs"
+    }
+  ]
+}
