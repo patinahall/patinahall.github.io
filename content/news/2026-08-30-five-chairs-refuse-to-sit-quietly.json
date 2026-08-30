@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "slug": "five-chairs-refuse-to-sit-quietly",
+  "title": "Five chairs that refuse to sit quietly",
+  "description": "Five new Furniture Library stories follow chairs that dismantle, flex, swivel and carry several thousand years of design history without dropping it.",
+  "publishedAt": "2026-08-30",
+  "label": "Library update",
+  "sections": [
+    {
+      "paragraphs": [
+        "The Furniture Library has five new stories, and the chairs have already ignored our request to sit quietly. One comes apart on purpose, two hide engineering beneath elegance, one carries more than three thousand years of joinery, and one turns a classical posture into steel and leather.",
+        "Each story begins with something the eye can actually follow—a joint, strap, spring, rail or woven surface—then lets that clue open onto makers, materials and history. No design-history password required."
+      ]
+    },
+    {
+      "heading": "1. Pompei Armchair: classical posture, steel nerves",
+      "paragraphs": [
+        "Alberto Orlandi’s Pompei Armchair turns a curule-like ceremonial stance into a broad metal rail, dark leather planes and brass punctuation. Later catalogues agree on the name and designer while keeping the date somewhere between circa 1980 and 1985. Apparently even dramatic chairs enjoy a little mystery."
+      ]
+    },
+    {
+      "heading": "2. Safari Chair: finished enough to come apart",
+      "paragraphs": [
+        "Kaare Klint’s 1933 Safari Chair treats dismantling as a design principle, not an embarrassing accident. Visible joints, canvas and leather straps make portability part of the chair’s character, while its Roorkhee precedent keeps the history more complicated than a handsome campfire fantasy. Think flat-pack furniture with considerably better manners."
+      ]
+    },
+    {
+      "heading": "3. Samuel Gragg’s Elastic Chair: a Greek curve learns to spring",
+      "paragraphs": [
+        "Made around 1810, Gragg’s painted chair looks Grecian, elegant and fully prepared for company. Follow one bent outer member from crest to front leg, though, and it becomes a remarkable experiment in compound curves. The nineteenth century was bending wood before bending wood was famous."
+      ]
+    },
+    {
+      "heading": "4. Warren’s Centripetal Spring Chair: dressed for the opera",
+      "paragraphs": [
+        "Beneath replacement green velvet, gilding and silk fringe, Thomas E. Warren’s circa-1850 chair tilts, swivels and rolls on casters. It is essentially an office chair that refused to leave the house without dressing for the opera. The patent drawing explains how the crossed springs make the performance possible."
+      ]
+    },
+    {
+      "heading": "5. Hatnefer’s Chair: construction you can still read",
+      "paragraphs": [
+        "The Met dates Hatnefer’s low chair to circa 1491–1473 BCE, yet its original linen cord, visible pegs and mortise-and-tenon joints still explain how it carried weight. At more than three thousand years old, it has preserved both its seat and its assembly notes. Some modern furniture misplaces the instructions before lunch."
+      ]
+    },
+    {
+      "heading": "A library for looking twice",
+      "paragraphs": [
+        "Five chairs, almost three and a half millennia, and not one easy answer. That is the pleasure of the Furniture Library: not turning furniture into a celebrity roll call, but making materials, mechanisms and evidence readable enough that the next chair you meet looks less ordinary.",
+        "We will keep adding stories one object at a time. The furniture appears to have more to say."
+      ]
+    }
+  ],
+  "callToAction": {
+    "label": "Explore the Furniture Library",
+    "href": "https://patinahall.com/furniture-library"
+  },
+  "relatedLinks": [
+    {
+      "label": "Meet the Pompei Armchair",
+      "href": "https://patinahall.com/furniture-library/designs/pompei-armchair"
+    },
+    {
+      "label": "Meet Kaare Klint’s Safari Chair",
+      "href": "https://patinahall.com/danish-furniture/designs/safari-chair"
+    }
+  ]
+}
