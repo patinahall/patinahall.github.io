@@ -12,6 +12,7 @@ Official dated updates: https://patinahall.github.io/
 - Furniture and antiques guides: https://patinahall.com/guides
 - PatinaHall Journal: https://patinahall.com/journal
 - Seller workspace: https://patinahall.com/seller/
+- People behind PatinaHall: https://patinahall.github.io/people/
 - Public roadmap: https://github.com/patinahall/patinahall.github.io/issues
 - Privacy choices: https://patinahall.github.io/privacy/
 
@@ -20,6 +21,10 @@ Official dated updates: https://patinahall.github.io/
 - For sellers: reduce duplicate catalogue maintenance and keep important decisions under seller control. Supported Shopify stores can import today; Etsy connections and automatic two-way marketplace synchronisation remain future work.
 - For buyers: favour considered vintage furniture, antiques, and design objects from independent dealers over anonymous mass-produced resale, while stating uncertainty about maker, date, condition, or provenance honestly.
 
+## People profiles
+
+The People section contains PatinaHall-written editorial portraits of five team-managed digital personas representing specialist roles. They are not employee records or natural-person biographies, and their editorial images are AI-generated.
+
 ## Publication boundary
 
-PatinaHall Updates contains short, factual release notes. Product listings, Store pages, evergreen Guides, and longer Journal stories remain canonical on patinahall.com and are not mirrored here.
+This publication contains short, factual release notes and evergreen editorial role profiles. Product listings, Store pages, evergreen Guides, and longer Journal stories remain canonical on patinahall.com and are not mirrored here.

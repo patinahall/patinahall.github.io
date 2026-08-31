@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "order": 1,
+  "slug": "daan-vermeer",
+  "name": "Daan Vermeer",
+  "role": "Lead Software Engineer",
+  "theme": "architecture",
+  "description": "Meet the role represented by Daan Vermeer and see how clear software architecture and honest furniture construction share a respect for what happens underneath.",
+  "lede": "Daan represents the part of PatinaHall that should feel almost invisible: the architecture keeping stores, products, media and buyer pages coherent as the marketplace grows. His role is to make the whole system easier to understand before making it larger.",
+  "focus": [
+    "Software architecture",
+    "Product systems",
+    "Vintage construction"
+  ],
+  "principle": {
+    "label": "Working principle",
+    "heading": "Make the complicated part quieter.",
+    "body": "Good architecture does not ask every visitor to admire it. It gives the rest of the product a stable place to stand, makes change less frightening and leaves enough room for the unusual objects PatinaHall exists to present."
+  },
+  "sections": [
+    {
+      "label": "The profession",
+      "heading": "Keeping the whole product legible",
+      "paragraphs": [
+        "A marketplace crosses many boundaries: seller tools, catalogue preparation, public discovery, editorial pages and the handoff back to an independent store. The Lead Software Engineer role looks across those boundaries and decides which ideas belong together, which must stay separate and how a change can move without surprising everything around it.",
+        "At PatinaHall, simplicity is not the absence of serious engineering. It is the result of choosing clear ownership, durable contracts and a small number of dependable paths. Buyers should see a calm catalogue; sellers should understand what the system is doing; engineers should be able to follow the same story underneath."
+      ]
+    },
+    {
+      "label": "The vintage connection",
+      "heading": "Joinery before decoration",
+      "paragraphs": [
+        "A cabinet can look effortless from the front while a drawer quietly reveals dovetails, runners, repairs and the decisions of its maker. That hidden construction is the vintage detail that best explains Daan's role. The strongest systems, like the strongest furniture, make their structure readable when somebody needs to inspect or repair it.",
+        "PatinaHall also deals in exceptions rather than identical units. A piece may have an uncertain maker, a replaced handle, several useful photographs and only one available example. The architecture has to preserve that uneven reality instead of forcing every object into false precision."
+      ]
+    },
+    {
+      "label": "What this changes",
+      "heading": "Room for the object to remain particular",
+      "paragraphs": [
+        "The practical result is not an architecture diagram on a buyer's screen. It is the ability to add a new store, improve a guide or change how an object is described without making the marketplace feel less trustworthy.",
+        "Daan's profile pairs system blocks with a visible cabinet joint because PatinaHall needs both kinds of thinking: an overview of how the parts connect and enough curiosity to look closely at one small construction detail."
+      ]
+    }
+  ],
+  "image": {
+    "url": "https://patinahall.github.io/assets/people/daan-vermeer-0a1fc97442b48394.jpg",
+    "alt": "Editorial illustration of Daan beside a laptop, system diagrams and an open vintage cabinet drawer showing dovetail joints.",
+    "width": 1536,
+    "height": 1024
+  },
+  "profiles": [
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/daan-vermeer-b30935428/"
+    },
+    {
+      "label": "Peerlist",
+      "href": "https://peerlist.io/daanvermeer"
+    }
+  ]
+}

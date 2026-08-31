@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "order": 3,
+  "slug": "niels-van-kessel",
+  "name": "Niels van Kessel",
+  "role": "Backend & Platform Engineer",
+  "theme": "platform",
+  "description": "Meet the role represented by Niels van Kessel and follow the platform work that helps a product travel from an independent store without losing its source.",
+  "lede": "Niels represents the routes products take before they appear in the PatinaHall catalogue. His backend and platform work connects stores, catalogue preparation and public pages while keeping the original seller and source data clear.",
+  "focus": [
+    "Backend engineering",
+    "Catalogue connections",
+    "Source integrity"
+  ],
+  "principle": {
+    "label": "Working principle",
+    "heading": "A product should travel without losing where it came from.",
+    "body": "Moving information is easy to describe and difficult to do responsibly. Every useful field needs an owner, every transformation needs a reason and every failure needs a path that does not quietly invent or duplicate a product."
+  },
+  "sections": [
+    {
+      "label": "The profession",
+      "heading": "The route behind the product page",
+      "paragraphs": [
+        "An independent store already has titles, photographs, prices and availability in the system it uses every day. The platform role helps PatinaHall prepare that catalogue without asking the owner to recreate it by hand. Connections, background work and storage all have to cooperate before a buyer sees one calm page.",
+        "Niels's discipline begins where the browser view stops. It asks what happens if a catalogue changes halfway through preparation, how repeated work avoids creating copies and how the seller can see whether a process succeeded, needs attention or should not continue."
+      ]
+    },
+    {
+      "label": "The vintage connection",
+      "heading": "Turn the chair over",
+      "paragraphs": [
+        "The underside of a chair often holds the clues the polished front leaves out: a maker's mark, an old label, later screws, repaired webbing or the path of previous ownership. Platform engineering has a similar interest in origins. A field is more trustworthy when the system can explain where it came from and what changed it.",
+        "That is why Niels's illustration runs from the back of a chair through catalogue cards and system blocks to a store. The platform should make those connections dependable without turning the seller into anonymous inventory."
+      ]
+    },
+    {
+      "label": "What this changes",
+      "heading": "Failure belongs in the design",
+      "paragraphs": [
+        "Furniture catalogues are full of practical irregularities: one-off stock, incomplete descriptions, large image sets and products that disappear as soon as they sell. A robust backend treats those situations as normal domain facts, not inconvenient noise.",
+        "The result is seller control and a clearer public record. Work can happen quietly in the background, but its status and consequences should remain visible to the people responsible for the collection."
+      ]
+    }
+  ],
+  "image": {
+    "url": "https://patinahall.github.io/assets/people/niels-van-kessel-fbca02e7a1f97111.jpg",
+    "alt": "Risograph-style editorial illustration of Niels tracing catalogue information from the underside of a vintage chair through connected system cards.",
+    "width": 1536,
+    "height": 1024
+  },
+  "profiles": [
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/niels-van-kessel-3310a542a/"
+    }
+  ]
+}

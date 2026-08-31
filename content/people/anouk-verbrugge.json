@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "order": 2,
+  "slug": "anouk-verbrugge",
+  "name": "Anouk Verbrugge",
+  "role": "Frontend Engineer",
+  "theme": "interface",
+  "description": "Meet the role represented by Anouk Verbrugge and see how frontend engineering helps material, scale and seller context survive the journey onto a screen.",
+  "lede": "Anouk represents the point where PatinaHall's machinery becomes something a person can actually see and use. Her frontend work turns photographs, measurements, condition notes and seller context into an interface that feels calm without making one-off furniture feel generic.",
+  "focus": [
+    "Frontend engineering",
+    "Interaction design",
+    "Material character"
+  ],
+  "principle": {
+    "label": "Working principle",
+    "heading": "A calm interface should still let an object feel particular.",
+    "body": "Clarity is not the same as removing every trace of character. The interface has to establish rhythm and confidence while leaving enough visual space for grain, wear, proportion and the seller's own point of view."
+  },
+  "sections": [
+    {
+      "label": "The profession",
+      "heading": "Building the layer people touch",
+      "paragraphs": [
+        "Frontend engineering owns more than the final coat of colour. It decides how information is grouped, what happens when a buyer moves through a gallery, whether a seller understands the next action and how the same journey changes between a wide desk and a narrow phone.",
+        "For PatinaHall, that visible layer also carries responsibility. A price must not drift away from its context. A photograph should not hide behind ornamental interface chrome. A useful condition note has to remain readable before enthusiasm turns into a decision."
+      ]
+    },
+    {
+      "label": "The vintage connection",
+      "heading": "Translating texture without pretending it can be touched",
+      "paragraphs": [
+        "Vintage furniture is physical: wool catches light differently from velvet, oak grain changes across a surface and a shallow photograph can make a cabinet look smaller than it is. A screen cannot reproduce touch, so the interface has to support close looking instead of making impossible promises.",
+        "That means thoughtful image crops, honest scale cues, comfortable typography and a hierarchy that lets measurements and seller evidence sit beside beauty. Anouk's visual world combines interface fragments with wood, textile and ceramic samples because neither side should erase the other."
+      ]
+    },
+    {
+      "label": "What this changes",
+      "heading": "Small screens still deserve the complete story",
+      "paragraphs": [
+        "Many discoveries begin on a phone, where every extra panel competes with the object itself. The frontend role keeps the essential path intact: understand the piece, see who is offering it and continue to the independent store when it feels right.",
+        "The goal is not to make PatinaHall look like a design exercise. It is to make a complicated marketplace feel direct enough that attention can return to the furniture."
+      ]
+    }
+  ],
+  "image": {
+    "url": "https://patinahall.github.io/assets/people/anouk-verbrugge-c53b373888cc5a4c.jpg",
+    "alt": "Editorial collage of Anouk arranging interface shapes beside wood, textile and ceramic samples and a vintage chair.",
+    "width": 1536,
+    "height": 1024
+  },
+  "profiles": [
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/anouk-verbrugge-090a3a428/"
+    },
+    {
+      "label": "Peerlist",
+      "href": "https://peerlist.io/anoukverbrugge"
+    }
+  ]
+}

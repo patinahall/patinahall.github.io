@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "order": 4,
+  "slug": "linde-hoekstra",
+  "name": "Linde Hoekstra",
+  "role": "Search & Data Engineer",
+  "theme": "search",
+  "description": "Meet the role represented by Linde Hoekstra and see how search engineering turns the uneven language of vintage furniture into useful paths for discovery.",
+  "lede": "Linde represents the work of helping people find the right piece without flattening a varied catalogue into a few broad labels. Her search and data role turns descriptions, materials, forms and uncertain facts into useful signals while keeping room for discovery.",
+  "focus": [
+    "Search engineering",
+    "Data modelling",
+    "Visual vocabulary"
+  ],
+  "principle": {
+    "label": "Working principle",
+    "heading": "Search begins by naming the differences that matter.",
+    "body": "Two objects can share a category and still answer completely different needs. Useful search pays attention to construction, material, scale, function and evidence rather than assuming that one fashionable style label explains everything."
+  },
+  "sections": [
+    {
+      "label": "The profession",
+      "heading": "From uneven descriptions to useful signals",
+      "paragraphs": [
+        "Vintage catalogues do not arrive with one shared vocabulary. A seller may describe a low cabinet, credenza, sideboard or dressoir; another may lead with a maker, material or decade. Search engineering creates enough structure for those descriptions to meet without rewriting every seller in the same voice.",
+        "Linde's role asks which attributes genuinely help a person decide and which only make the data look tidy. Dimensions, material, object type and availability can be concrete. Maker and date may carry uncertainty. The model has to preserve both."
+      ]
+    },
+    {
+      "label": "The vintage connection",
+      "heading": "Looking twice is a search skill",
+      "paragraphs": [
+        "At first glance, two chairs may share a silhouette. Look again and the arms, joinery, upholstery, seat height or evidence of repair begin to separate them. That repeated act of comparison is the vintage counterpart to Linde's work: finding the small distinctions that change a result from merely similar to genuinely relevant.",
+        "Her archival visual language uses object cards, material samples and overlapping index layers. It presents search as a way of organising attention, not as a magic box that always knows what a buyer meant."
+      ]
+    },
+    {
+      "label": "What this changes",
+      "heading": "Discovery without a perfect query",
+      "paragraphs": [
+        "Not every visitor arrives knowing a designer's name or the accepted term for a form. A good catalogue should support precise searches and still reward someone who begins with a room, a material or a half-remembered shape.",
+        "The search role helps PatinaHall create those multiple entrances while keeping the evidence behind each object visible. The best result is not always the most famous one; sometimes it is the piece a buyer could not yet name."
+      ]
+    }
+  ],
+  "image": {
+    "url": "https://patinahall.github.io/assets/people/linde-hoekstra-4fb6890e9f7c1942.jpg",
+    "alt": "Archival editorial collage of Linde comparing chair cards among furniture silhouettes, wood samples and layered index shapes.",
+    "width": 1536,
+    "height": 1024
+  },
+  "profiles": [
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/linde-hoekstra-89210542a/"
+    }
+  ]
+}

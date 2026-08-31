@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "order": 5,
+  "slug": "nora-van-esch",
+  "name": "Nora van Esch",
+  "role": "Quality & Automation Engineer",
+  "theme": "quality",
+  "description": "Meet the role represented by Nora van Esch and see why inspecting a complete product journey has more in common with assessing vintage furniture than chasing perfection.",
+  "lede": "Nora represents the discipline of checking whether PatinaHall works the way its pages and processes say it does. Her quality and automation role follows complete buyer and seller journeys, makes repeatable checks dependable and keeps surprising evidence visible.",
+  "focus": [
+    "Quality engineering",
+    "Release automation",
+    "Evidence and condition"
+  ],
+  "principle": {
+    "label": "Working principle",
+    "heading": "Confidence comes from checking the whole path.",
+    "body": "A single polished screen cannot prove that a journey works. Quality comes from following the transitions around it: the state before, the action itself, the information that survives and the honest failure when an expectation is not met."
+  },
+  "sections": [
+    {
+      "label": "The profession",
+      "heading": "The release is more than its best-looking page",
+      "paragraphs": [
+        "Quality engineering looks across the route a person actually takes. A catalogue may render beautifully while a filter loses its state, a seller action lacks useful feedback or a narrow screen hides the next step. Nora's role turns those complete journeys into checks that can be repeated before a release.",
+        "Automation handles the stable evidence: routes, data boundaries, responsive states and the behaviours that should never depend on luck. It also makes failures specific enough to investigate instead of hiding them behind another attempt."
+      ]
+    },
+    {
+      "label": "The vintage connection",
+      "heading": "Condition is not the same as perfection",
+      "paragraphs": [
+        "Assessing vintage furniture begins with the real object, not an imaginary flawless version. A careful buyer checks movement, joints, repairs, surfaces and anything that affects use, then separates honest age from an active problem. Quality work makes a similar distinction between harmless variation and behaviour that breaks a promise.",
+        "Nora's contact-sheet composition places one joint under several angles of inspection. No single frame has to carry the whole conclusion; confidence grows from consistent evidence."
+      ]
+    },
+    {
+      "label": "What this changes",
+      "heading": "Automate repetition, keep judgement visible",
+      "paragraphs": [
+        "The purpose of automation is not to declare that everything is perfect. It is to perform repeatable checks reliably, free attention for new risks and leave a clear trail when something differs from the accepted behaviour.",
+        "For PatinaHall, that means releases can stay careful as the marketplace grows. Buyers and sellers should encounter predictable paths, while unusual furniture and genuinely new situations still receive human attention."
+      ]
+    }
+  ],
+  "image": {
+    "url": "https://patinahall.github.io/assets/people/nora-van-esch-9e798e6001807bf0.jpg",
+    "alt": "Screenprint-style editorial illustration of Nora inspecting a vintage furniture joint alongside a sequence of visual quality checks.",
+    "width": 1536,
+    "height": 1024
+  },
+  "profiles": [
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/nora-van-esch-42a873429/"
+    }
+  ]
+}

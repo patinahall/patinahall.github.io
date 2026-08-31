@@ -20,12 +20,21 @@ assert.match(home, />Browse the catalogue</u);
 assert.match(home, />For store owners</u);
 assert.match(headerMarkup, /data-header-primary/u);
 assert.match(headerMarkup, /data-header-destinations/u);
+assert.match(headerMarkup, />People</u);
 assert.match(headerMarkup, />Browse catalogue/u);
 assert.match(styles, /\.site-header__inner\s*\{/u);
 assert.match(styles, /\.site-header--destinations \.site-header__destinations/u);
 assert.match(
   styles,
   /@media \(max-width: 760px\)[\s\S]*\.destination-gateway\s*\{[\s\S]*grid-template-columns: 1fr;/u
+);
+assert.match(
+  styles,
+  /@media \(max-width: 760px\)[\s\S]*\.site-header \.brand > span:last-child\s*\{[\s\S]*display: none;/u
+);
+assert.doesNotMatch(
+  styles,
+  /\.site-nav > a\s*\{\s*display: none;/u
 );
 
 const classes = new Set();
