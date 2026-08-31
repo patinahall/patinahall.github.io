@@ -630,7 +630,7 @@ const peopleBody = `
       </div>
       <div class="people-intro__copy">
         <p>Climbing routes, watercolour, chessboards, walking notebooks, old paper and café tables come first. Each profile begins with a personal story, follows a distinct love of vintage things and saves PatinaHall for the final chapter.</p>
-        <p class="people-disclosure" data-persona-disclosure>These are team-managed digital personas representing the roles behind PatinaHall, not employee records. Their editorial images are AI-generated.</p>
+        <p class="people-disclosure" data-persona-disclosure>These are team-managed editorial profiles representing the roles behind PatinaHall, not employee records.</p>
       </div>
     </header>
     <section class="people-grid" aria-label="PatinaHall personal profiles">
@@ -696,7 +696,7 @@ for (const [personIndex, person] of people.entries()) {
         </div>
         <figure class="person-media">
           <img src="${escapeHtml(person.image.src)}" alt="${escapeHtml(person.image.alt)}" width="${person.image.width}" height="${person.image.height}" fetchpriority="high">
-          <figcaption>AI-generated editorial portrait for a team-managed PatinaHall profile.</figcaption>
+          <figcaption>Editorial portrait for a team-managed PatinaHall profile.</figcaption>
         </figure>
       </header>
       <div class="person-layout">
@@ -714,7 +714,7 @@ for (const [personIndex, person] of people.entries()) {
       </div>
       <aside class="person-disclosure" data-persona-disclosure aria-label="About this profile">
         <p class="eyebrow">About this profile</p>
-        <p><strong>${escapeHtml(person.name)}</strong> is a team-managed digital persona representing the ${escapeHtml(person.role)} role behind PatinaHall. This PatinaHall-written page describes the discipline, not an individual employment record or personal biography. The editorial image is AI-generated.</p>
+        <p><strong>${escapeHtml(person.name)}</strong> is a team-managed digital persona representing the ${escapeHtml(person.role)} role behind PatinaHall. This PatinaHall-written page describes the discipline, not an individual employment record or personal biography.</p>
       </aside>
       <a class="person-next" href="/people/${nextPerson.slug}/">
         <span>Next profile</span>
@@ -834,7 +834,7 @@ const aboutBody = `
       <p class="eyebrow">Behind PatinaHall</p>
       <h2 id="about-people-title">Meet the people before the job titles.</h2>
       <p>Our People section begins with six distinct worlds: climbing and old buildings, horses and watercolour, chess and maps, dance and theatre, swimming and book restoration, small cafés and well-used ceramics. Each portrait then follows that way of paying attention into a specialist profession and, only at the end, into PatinaHall.</p>
-      <p>The profiles are team-managed editorial personas rather than employee records, and their illustrations are AI-generated.</p>
+      <p>The profiles are team-managed editorial personas rather than employee records.</p>
       <a class="article__cta" href="/people/">Meet the people <span aria-hidden="true">→</span></a>
     </section>
     <section class="about-publication" aria-labelledby="about-publication-title">
@@ -982,7 +982,7 @@ Official dated updates: ${siteOrigin}/
 
 ## People profiles
 
-The People section contains PatinaHall-written personal portraits of six team-managed digital personas representing specialist roles. Each begins with reviewed interests and a distinct vintage point of view, then closes with the role at PatinaHall. They are not employee records or natural-person biographies, and their editorial images are AI-generated.
+The People section contains PatinaHall-written personal portraits of six team-managed digital personas representing specialist roles. Each begins with reviewed interests and a distinct vintage point of view, then closes with the role at PatinaHall. They are not employee records or natural-person biographies.
 
 ## Publication boundary
 

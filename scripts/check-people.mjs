@@ -84,7 +84,7 @@ for (const person of people) {
     "u"
   ));
   assert.match(html, /data-persona-disclosure/u);
-  assert.match(html, /AI-generated editorial portrait/u);
+  assert.match(html, /Editorial portrait for a team-managed PatinaHall profile/u);
   assert.match(html, /class="person-section person-section--patinahall"/u);
   assert.match(html, /"@type":"WebPage"/u);
   assert.doesNotMatch(html, /"@type":"Person"/u);
