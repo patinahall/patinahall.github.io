@@ -33,6 +33,7 @@ const allowedEditorialLinkOrigins = new Set([
 ]);
 const allowedPeopleThemes = new Set([
   "architecture",
+  "hospitality",
   "interface",
   "platform",
   "quality",
@@ -40,6 +41,7 @@ const allowedPeopleThemes = new Set([
 ]);
 const peopleThemeColors = Object.freeze({
   architecture: "#e8e2d8",
+  hospitality: "#cfd9ca",
   interface: "#f0e4e3",
   platform: "#ece1cf",
   quality: "#dfe9e1",
@@ -268,9 +270,8 @@ const validatePerson = (value, fileName) => {
   };
 
   assert(Array.isArray(value.profiles)
-    && value.profiles.length > 0
     && value.profiles.length <= 2,
-  `${fileName}.profiles must contain 1-2 links`);
+  `${fileName}.profiles must contain 0-2 links`);
   const profiles = value.profiles.map((profile, profileIndex) => {
     assert(profile !== null && typeof profile === "object",
       `${fileName}.profiles[${profileIndex}] is invalid`);
@@ -301,9 +302,6 @@ const validatePerson = (value, fileName) => {
   });
   assert(new Set(profiles.map(({ label }) => label)).size === profiles.length,
     `${fileName}.profiles labels must be unique`);
-  assert(profiles.some(({ label }) => label === "LinkedIn"),
-    `${fileName}.profiles must include LinkedIn`);
-
   return Object.freeze({
     order: value.order,
     slug,
@@ -343,7 +341,7 @@ const people = readdirSync(resolve(root, "content/people"))
   ))
   .sort((left, right) => left.order - right.order);
 
-assert(people.length === 5, "Exactly five People profiles are required");
+assert(people.length === 6, "Exactly six People profiles are required");
 assert(new Set(people.map(({ slug }) => slug)).size === people.length,
   "People slugs must be unique");
 assert(new Set(people.map(({ order }) => order)).size === people.length,
@@ -513,10 +511,10 @@ const homeBody = `
       <header>
         <div>
           <p class="eyebrow">Behind PatinaHall</p>
-          <h2 id="people-teaser-title">Five people, five ways of paying attention.</h2>
+          <h2 id="people-teaser-title">Six people, six ways of paying attention.</h2>
         </div>
         <div class="people-teaser__intro">
-          <p>Meet the climber, rider, chess player, dancer and book restorer behind five specialist roles—and discover the vintage worlds they notice along the way.</p>
+          <p>Meet six people whose interests range from climbing walls to café tables—and discover the vintage worlds they notice along the way.</p>
           <a href="/people/">Meet the people →</a>
         </div>
       </header>
@@ -631,7 +629,7 @@ const peopleBody = `
         <h1>Meet the people behind the work.</h1>
       </div>
       <div class="people-intro__copy">
-        <p>Climbing routes, watercolour, chessboards, walking notebooks and old paper come first. Each profile begins with a personal story, follows a distinct love of vintage things and saves PatinaHall for the final chapter.</p>
+        <p>Climbing routes, watercolour, chessboards, walking notebooks, old paper and café tables come first. Each profile begins with a personal story, follows a distinct love of vintage things and saves PatinaHall for the final chapter.</p>
         <p class="people-disclosure" data-persona-disclosure>These are team-managed digital personas representing the roles behind PatinaHall, not employee records. Their editorial images are AI-generated.</p>
       </div>
     </header>
@@ -645,7 +643,7 @@ const peopleData = {
   "@type": "CollectionPage",
   name: "People at PatinaHall",
   description:
-    "Personal editorial portraits of five team-managed specialist personas represented behind PatinaHall.",
+    "Personal editorial portraits of six team-managed specialist personas represented behind PatinaHall.",
   url: `${siteOrigin}/people/`,
   publisher: organizationData,
   about: { "@id": organizationId },
@@ -660,7 +658,7 @@ const peopleData = {
 generated.push(["people/index.html", layout({
   title: "People · PatinaHall",
   description:
-    "Meet five personal editorial profiles shaped by climbing, horses, chess, dance, book restoration and a shared curiosity about vintage objects.",
+    "Meet six personal editorial profiles shaped by climbing, horses, chess, dance, books, small cafés and a shared curiosity about vintage objects.",
   canonicalPath: "/people/",
   body: peopleBody,
   pageClass: "people-page",
@@ -706,9 +704,9 @@ for (const [personIndex, person] of people.entries()) {
           <p class="eyebrow">${escapeHtml(person.principle.label)}</p>
           <h2>${escapeHtml(person.principle.heading)}</h2>
           <p>${escapeHtml(person.principle.body)}</p>
-          <nav class="person-profiles" aria-label="${escapeHtml(person.name)} public profiles">
+          ${person.profiles.length === 0 ? "" : `<nav class="person-profiles" aria-label="${escapeHtml(person.name)} public profiles">
             ${profileLinks}
-          </nav>
+          </nav>`}
         </aside>
         <div class="person-sections">
           ${sections}
@@ -835,21 +833,21 @@ const aboutBody = `
     <section class="about-people" aria-labelledby="about-people-title">
       <p class="eyebrow">Behind PatinaHall</p>
       <h2 id="about-people-title">Meet the people before the job titles.</h2>
-      <p>Our People section begins with five distinct worlds: climbing and old buildings, horses and watercolour, chess and maps, dance and theatre, swimming and book restoration. Each portrait then follows that way of paying attention into a specialist profession and, only at the end, into PatinaHall.</p>
+      <p>Our People section begins with six distinct worlds: climbing and old buildings, horses and watercolour, chess and maps, dance and theatre, swimming and book restoration, small cafés and well-used ceramics. Each portrait then follows that way of paying attention into a specialist profession and, only at the end, into PatinaHall.</p>
       <p>The profiles are team-managed editorial personas rather than employee records, and their illustrations are AI-generated.</p>
       <a class="article__cta" href="/people/">Meet the people <span aria-hidden="true">→</span></a>
     </section>
     <section class="about-publication" aria-labelledby="about-publication-title">
       <p class="eyebrow">About this publication</p>
       <h2 id="about-publication-title">Updates and the roles behind them.</h2>
-      <p>PatinaHall publishes short, dated notes about meaningful releases and evergreen personal portraits of the personas behind five specialist roles. It does not mirror the catalogue or repeat buyer guides.</p>
+      <p>PatinaHall publishes short, dated notes about meaningful releases and evergreen personal portraits of the personas behind six specialist roles. It does not mirror the catalogue or repeat buyer guides.</p>
       <p>Explore current pieces and Store pages on <a href="${marketplaceOrigin}/">patinahall.com</a>, read practical advice in <a href="${marketplaceOrigin}/guides">Guides</a>, find longer stories in the <a href="${marketplaceOrigin}/journal">PatinaHall Journal</a>, or follow product work suitable for public discussion in the <a href="https://github.com/patinahall/patinahall.github.io/issues">public roadmap on GitHub</a>.</p>
     </section>
   </main>`;
 
 generated.push(["about/index.html", layout({
   title: "About · PatinaHall",
-  description: "PatinaHall is guided by two principles: less catalogue maintenance for independent sellers and a more considered marketplace for buyers, supported by five specialist roles.",
+  description: "PatinaHall is guided by two principles: less catalogue maintenance for independent sellers and a more considered marketplace for buyers, supported by six specialist roles.",
   canonicalPath: "/about/",
   body: aboutBody,
   pageClass: "about"
@@ -984,7 +982,7 @@ Official dated updates: ${siteOrigin}/
 
 ## People profiles
 
-The People section contains PatinaHall-written personal portraits of five team-managed digital personas representing specialist roles. Each begins with reviewed interests and a distinct vintage point of view, then closes with the role at PatinaHall. They are not employee records or natural-person biographies, and their editorial images are AI-generated.
+The People section contains PatinaHall-written personal portraits of six team-managed digital personas representing specialist roles. Each begins with reviewed interests and a distinct vintage point of view, then closes with the role at PatinaHall. They are not employee records or natural-person biographies, and their editorial images are AI-generated.
 
 ## Publication boundary
 

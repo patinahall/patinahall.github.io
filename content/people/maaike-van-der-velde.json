@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "order": 6,
+  "slug": "maaike-van-der-velde",
+  "name": "Maaike van der Velde",
+  "role": "Client Satisfaction Manager",
+  "theme": "hospitality",
+  "description": "Maaike van der Velde is a curious cook, reader and swimmer whose affection for small cafés and well-used objects informs her work as Client Satisfaction Manager.",
+  "lede": "Maaike does not try to impress a room. She would rather understand it. Conversation comes easily, but curiosity is what keeps her there: why someone chose a particular object, which journey they still remember or what story is hiding behind an ordinary answer. Give her a small café, a good book and a little time, and she is in no hurry to leave.",
+  "focus": [
+    "Small cafés",
+    "Cooking & books",
+    "Swimming"
+  ],
+  "principle": {
+    "label": "A way of wondering",
+    "heading": "Not knowing is where the interesting part begins.",
+    "body": "Maaike is comfortable saying ‘I don’t know.’ For her, uncertainty is not a failure of the conversation but an invitation to ask one more useful question. Curiosity keeps the answer honest and makes room for something unexpected to appear."
+  },
+  "sections": [
+    {
+      "label": "Kitchen, books & water",
+      "heading": "Three ways to clear a little room",
+      "paragraphs": [
+        "Cooking begins with a ritual rather than a performance: music in the kitchen, an open recipe book, a drink within reach and enough freedom to improvise. Maaike likes a meal that can absorb a small change of plan without becoming a crisis.",
+        "Books offer a different kind of escape, especially when there is a mystery, a journey or an unusual hero to follow. One chapter before bed can quietly become two in the morning. Swimming resets her more directly: steady movement, fewer decisions and enough silence for the mind to settle."
+      ]
+    },
+    {
+      "label": "The vintage eye",
+      "heading": "A life can remain visible in a surface",
+      "paragraphs": [
+        "Maaike is drawn to old ceramic, glass, wood and leather, particularly the modest objects that once belonged to somebody’s ordinary day. They do not need a famous maker or a perfect pedigree to earn attention; sometimes scale, touch and evidence of use are enough.",
+        "A scratch, softened colour or worn edge does not automatically diminish an object. It can be proof that the thing was useful, chosen and kept. Maaike likes the thought that an object can outlive its first owner without losing every trace of the life it already had."
+      ]
+    },
+    {
+      "label": "At PatinaHall",
+      "heading": "Keeping curiosity inside a difficult conversation",
+      "paragraphs": [
+        "As Client Satisfaction Manager, Maaike stays close to the questions and frustrations that arrive when someone needs help. She listens for the question beneath the first question, keeps the conversation calm when it becomes difficult and carries the right context to the people who can resolve it.",
+        "Her curiosity matters as much as her composure. Rather than reaching for a polished answer too early, she is willing to name what is not yet known, notice a detail that does not fit and keep looking until the next useful step is clear."
+      ]
+    }
+  ],
+  "image": {
+    "url": "https://patinahall.github.io/assets/people/maaike-van-der-velde-4d80161753ca0f83.jpg",
+    "alt": "Gouache and coloured-pencil editorial portrait of Maaike reading beside a worn ceramic cup in a small neighbourhood café.",
+    "width": 1536,
+    "height": 1024
+  },
+  "profiles": []
+}

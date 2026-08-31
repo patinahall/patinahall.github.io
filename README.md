@@ -37,7 +37,8 @@ Every People profile must:
 4. connect the represented profession to concrete PatinaHall work and one
    grounded way of looking at vintage furniture;
 5. disclose the managed-persona and AI-generated-image boundary visibly;
-6. use reviewed external profile links and content-hashed first-party media;
+6. use only reviewed external profile links when available, and content-hashed
+   first-party media;
 7. omit persona email aliases, credentials, invented personal history, and
    `Person`, founder, employee, or member structured-data claims.
 

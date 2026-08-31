@@ -20,7 +20,7 @@ const people = readdirSync(resolve(root, "content/people"))
   ))
   .sort((left, right) => left.order - right.order);
 
-assert.equal(people.length, 5);
+assert.equal(people.length, 6);
 assert.equal(new Set(people.map(({ slug }) => slug)).size, people.length);
 assert.equal(new Set(people.map(({ theme }) => theme)).size, people.length);
 assert.equal(new Set(people.map(({ image }) => image.url)).size, people.length);
@@ -110,4 +110,4 @@ for (const person of people) {
   });
 }
 
-process.stdout.write("Verified five disclosed PatinaHall role profiles and their first-party media.\n");
+process.stdout.write("Verified six disclosed PatinaHall role profiles and their first-party media.\n");
