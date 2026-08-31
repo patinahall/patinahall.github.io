@@ -1,8 +1,9 @@
 # PatinaHall public notes
 
 The official public publication for meaningful
-[PatinaHall](https://patinahall.com/) releases and evergreen editorial
-portraits of the specialist roles represented behind the marketplace.
+[PatinaHall](https://patinahall.com/) releases and evergreen personal and
+professional portraits of the specialist personas represented behind the
+marketplace.
 
 ## Purpose
 
@@ -29,11 +30,15 @@ Every People profile must:
 
 1. remain an editorial portrait of a team-managed digital role persona, not an
    employee record or natural-person biography;
-2. connect the represented profession to concrete PatinaHall work and one
+2. include only personal interests explicitly approved for public use, without
+   importing private boundaries, names or speculative detail into the page;
+3. begin with the persona's interests and point of view, develop the vintage
+   connection, and reserve the concrete PatinaHall role for the final section;
+4. connect the represented profession to concrete PatinaHall work and one
    grounded way of looking at vintage furniture;
-3. disclose the managed-persona and AI-generated-image boundary visibly;
-4. use reviewed external profile links and content-hashed first-party media;
-5. omit persona email aliases, credentials, invented personal history, and
+5. disclose the managed-persona and AI-generated-image boundary visibly;
+6. use reviewed external profile links and content-hashed first-party media;
+7. omit persona email aliases, credentials, invented personal history, and
    `Person`, founder, employee, or member structured-data claims.
 
 ## Publishing

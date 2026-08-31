@@ -799,8 +799,10 @@ h3,
 }
 
 .people-card,
-.person-profile {
+.person-profile,
+.person-page-body {
   --profile-accent: var(--clay);
+  --profile-page: var(--paper);
   --profile-surface: var(--paper-deep);
   --profile-ink: var(--ink);
 }
@@ -809,6 +811,7 @@ h3,
 .person-profile--architecture,
 .person-page-body--architecture {
   --profile-accent: #344c67;
+  --profile-page: #e8e2d8;
   --profile-surface: #e4ddd0;
   --profile-ink: #1f2a35;
 }
@@ -817,6 +820,7 @@ h3,
 .person-profile--interface,
 .person-page-body--interface {
   --profile-accent: #795a83;
+  --profile-page: #f0e4e3;
   --profile-surface: #eee3dc;
   --profile-ink: #382a3d;
 }
@@ -825,6 +829,7 @@ h3,
 .person-profile--platform,
 .person-page-body--platform {
   --profile-accent: #b75b30;
+  --profile-page: #ece1cf;
   --profile-surface: #e9dfcd;
   --profile-ink: #26384b;
 }
@@ -833,6 +838,7 @@ h3,
 .person-profile--search,
 .person-page-body--search {
   --profile-accent: #28496c;
+  --profile-page: #dde7e7;
   --profile-surface: #dfe2e1;
   --profile-ink: #283249;
 }
@@ -841,6 +847,7 @@ h3,
 .person-profile--quality,
 .person-page-body--quality {
   --profile-accent: #b85442;
+  --profile-page: #dfe9e1;
   --profile-surface: #dbe6df;
   --profile-ink: #183d3d;
 }
@@ -922,8 +929,8 @@ h3,
 .people-card h2 {
   margin: 0 0 22px;
   color: var(--profile-ink);
-  font-size: clamp(2.25rem, 4vw, 4.4rem);
-  line-height: 0.98;
+  font-size: clamp(2.15rem, 3.5vw, 3.8rem);
+  line-height: 1;
 }
 
 .people-card h2 a {
@@ -956,8 +963,12 @@ h3,
 
 .person-page-body {
   background:
-    radial-gradient(circle at 92% 2%, color-mix(in srgb, var(--profile-accent) 14%, transparent), transparent 31rem),
-    var(--paper);
+    radial-gradient(circle at 92% 2%, color-mix(in srgb, var(--profile-accent) 16%, transparent), transparent 31rem),
+    var(--profile-page);
+}
+
+.person-page-body .destination-gateway {
+  background: color-mix(in srgb, var(--profile-page) 70%, var(--paper));
 }
 
 .person-page {
@@ -966,13 +977,16 @@ h3,
 
 .person-hero {
   display: grid;
-  grid-template-columns: minmax(120px, 0.25fr) minmax(0, 1fr);
-  gap: clamp(30px, 7vw, 94px);
-  padding: 12px 0 clamp(50px, 7vw, 84px);
+  grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.72fr);
+  gap: clamp(42px, 7vw, 92px);
+  align-items: center;
+  padding: 0 0 clamp(62px, 8vw, 96px);
 }
 
 .person-hero__back {
-  align-self: start;
+  display: inline-flex;
+  width: fit-content;
+  margin: 0 0 clamp(38px, 6vw, 62px);
   color: var(--muted);
   font-size: 0.84rem;
   font-weight: 700;
@@ -980,7 +994,7 @@ h3,
 }
 
 .person-hero__heading {
-  width: min(100%, 900px);
+  width: min(100%, 760px);
 }
 
 .person-hero .eyebrow,
@@ -993,17 +1007,19 @@ h3,
 .person-hero h1 {
   margin: 0 0 28px;
   color: var(--profile-ink);
-  font-size: clamp(4rem, 9vw, 8.6rem);
-  line-height: 0.86;
+  font-family: "Iowan Old Style", Baskerville, Georgia, "Times New Roman", serif;
+  font-size: clamp(3.25rem, 6.4vw, 6.6rem);
+  letter-spacing: -0.045em;
+  line-height: 0.92;
 }
 
 .person-hero__lede {
   max-width: 780px;
   margin: 0;
   color: var(--muted);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.22rem, 2.1vw, 1.62rem);
-  line-height: 1.55;
+  font-family: "Iowan Old Style", Baskerville, Georgia, "Times New Roman", serif;
+  font-size: clamp(1.15rem, 1.75vw, 1.42rem);
+  line-height: 1.62;
 }
 
 .person-focus {
@@ -1025,6 +1041,8 @@ h3,
 }
 
 .person-media {
+  width: min(100%, 520px);
+  justify-self: end;
   margin: 0;
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--profile-accent) 48%, var(--line));
@@ -1035,8 +1053,28 @@ h3,
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 5 / 4;
   object-fit: cover;
+}
+
+.person-profile--architecture .person-media img {
+  object-position: 50% 48%;
+}
+
+.person-profile--interface .person-media img {
+  object-position: 48% 50%;
+}
+
+.person-profile--platform .person-media img {
+  object-position: 50% 50%;
+}
+
+.person-profile--search .person-media img {
+  object-position: 46% 50%;
+}
+
+.person-profile--quality .person-media img {
+  object-position: 50% 52%;
 }
 
 .person-media figcaption {
@@ -1069,7 +1107,7 @@ h3,
   grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
   gap: clamp(42px, 8vw, 116px);
   align-items: start;
-  padding: clamp(66px, 10vw, 118px) 0;
+  padding: clamp(52px, 8vw, 92px) 0;
 }
 
 .person-principle {
@@ -1097,14 +1135,15 @@ h3,
 .person-principle h2 {
   margin: 0 0 22px;
   color: var(--profile-ink);
-  font-size: clamp(2.1rem, 3.7vw, 3.5rem);
-  line-height: 1;
+  font-family: "Iowan Old Style", Baskerville, Georgia, "Times New Roman", serif;
+  font-size: clamp(1.9rem, 3vw, 2.9rem);
+  line-height: 1.04;
 }
 
 .person-principle > p:not(.eyebrow) {
   margin: 0;
   color: var(--muted);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Iowan Old Style", Baskerville, Georgia, "Times New Roman", serif;
   font-size: 1.08rem;
   line-height: 1.68;
 }
@@ -1158,16 +1197,37 @@ h3,
 .person-sections h2 {
   margin: 0 0 26px;
   color: var(--profile-ink);
-  font-size: clamp(2.4rem, 4.8vw, 4.8rem);
-  line-height: 0.98;
+  font-family: "Iowan Old Style", Baskerville, Georgia, "Times New Roman", serif;
+  font-size: clamp(2.05rem, 3.8vw, 3.8rem);
+  line-height: 1.02;
 }
 
 .person-sections p:not(.eyebrow) {
   margin: 0 0 24px;
   color: var(--muted);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Iowan Old Style", Baskerville, Georgia, "Times New Roman", serif;
   font-size: clamp(1.08rem, 1.65vw, 1.27rem);
   line-height: 1.76;
+}
+
+.person-sections section.person-section--patinahall {
+  margin-top: clamp(18px, 3vw, 32px);
+  padding: clamp(34px, 5vw, 56px);
+  border: 1px solid color-mix(in srgb, var(--profile-accent) 54%, var(--line));
+  border-left: 8px solid var(--profile-accent);
+  background: color-mix(in srgb, var(--profile-surface) 78%, var(--profile-page));
+}
+
+.person-section--patinahall .eyebrow {
+  width: fit-content;
+  margin-bottom: 24px;
+  padding: 8px 11px;
+  background: var(--profile-accent);
+  color: var(--profile-page);
+}
+
+.person-section--patinahall p:last-child {
+  margin-bottom: 0;
 }
 
 .person-profile--search .person-layout {
@@ -1191,6 +1251,7 @@ h3,
   padding: clamp(32px, 5vw, 52px);
   border: 1px solid var(--line);
   border-left: 8px solid var(--profile-accent);
+  background: color-mix(in srgb, var(--profile-page) 70%, var(--paper));
 }
 
 .person-disclosure .eyebrow {
@@ -1230,8 +1291,8 @@ h3,
 
 .person-next strong {
   color: var(--profile-ink);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-family: "Iowan Old Style", Baskerville, Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 3.4vw, 3.4rem);
   font-weight: 400;
   line-height: 1;
   text-align: right;
@@ -1661,12 +1722,41 @@ h3,
     overflow-wrap: anywhere;
   }
 
+  .people-intro h1 {
+    font-size: clamp(3rem, 13vw, 3.8rem);
+    line-height: 0.95;
+  }
+
+  .people-card h2 {
+    font-size: clamp(2.1rem, 10vw, 3rem);
+  }
+
   .person-hero {
-    gap: 32px;
+    gap: 34px;
   }
 
   .person-hero__back {
     width: fit-content;
+    margin-bottom: 36px;
+  }
+
+  .person-hero h1 {
+    font-size: clamp(3.15rem, 14vw, 4.35rem);
+    line-height: 0.94;
+  }
+
+  .person-hero__lede {
+    font-size: 1.16rem;
+    line-height: 1.62;
+  }
+
+  .person-media {
+    width: 100%;
+    justify-self: stretch;
+  }
+
+  .person-media img {
+    aspect-ratio: 5 / 4;
   }
 
   .person-hero h1,
@@ -1691,6 +1781,10 @@ h3,
 
   .person-principle {
     position: static;
+  }
+
+  .person-sections section.person-section--patinahall {
+    padding: 30px 26px;
   }
 
   .person-profile--search .person-layout {

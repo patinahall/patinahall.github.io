@@ -5,47 +5,47 @@
   "name": "Daan Vermeer",
   "role": "Lead Software Engineer",
   "theme": "architecture",
-  "description": "Meet the role represented by Daan Vermeer and see how clear software architecture and honest furniture construction share a respect for what happens underneath.",
-  "lede": "Daan represents the part of PatinaHall that should feel almost invisible: the architecture keeping stores, products, media and buyer pages coherent as the marketplace grows. His role is to make the whole system easier to understand before making it larger.",
+  "description": "Daan Vermeer is a climber, photographer of old buildings and Lead Software Engineer with an eye for mechanical watches and 1920s–30s design.",
+  "lede": "A chance trip with friends put Daan on his first climbing route. He stayed for the unusual lines—the ones that make him pause, study the surface and find a way through that is not immediately obvious. Away from the wall, he photographs old buildings and looks for the construction details time has left visible.",
   "focus": [
-    "Software architecture",
-    "Product systems",
-    "Vintage construction"
+    "Climbing",
+    "Architectural photography",
+    "1920s–30s design"
   ],
   "principle": {
-    "label": "Working principle",
-    "heading": "Make the complicated part quieter.",
-    "body": "Good architecture does not ask every visitor to admire it. It gives the rest of the product a stable place to stand, makes change less frightening and leaves enough room for the unusual objects PatinaHall exists to present."
+    "label": "A way of looking",
+    "heading": "The most interesting route is rarely the most obvious one.",
+    "body": "Climbing taught Daan to read a surface before moving: where the weight can settle, which hold changes the route and when a pause reveals an option that speed would miss. Photographing old buildings asks for the same patience, only with light, structure and traces of use instead of stone."
   },
   "sections": [
     {
-      "label": "The profession",
-      "heading": "Keeping the whole product legible",
+      "label": "Climbing & photography",
+      "heading": "Routes, façades and the pleasure of looking twice",
       "paragraphs": [
-        "A marketplace crosses many boundaries: seller tools, catalogue preparation, public discovery, editorial pages and the handoff back to an independent store. The Lead Software Engineer role looks across those boundaries and decides which ideas belong together, which must stay separate and how a change can move without surprising everything around it.",
-        "At PatinaHall, simplicity is not the absence of serious engineering. It is the result of choosing clear ownership, durable contracts and a small number of dependable paths. Buyers should see a calm catalogue; sellers should understand what the system is doing; engineers should be able to follow the same story underneath."
+        "Daan began climbing after joining friends on an unplanned trip. What could have remained a one-off afternoon became a habit of seeking unusual routes: the lines that reward balance, observation and a willingness to reconsider the first solution.",
+        "His camera comes out for old buildings rather than polished new façades. A repaired window, worn stair or unexpected junction between two materials can tell a longer story than a perfectly centred elevation. The photograph is a way to keep that evidence without tidying it away."
       ]
     },
     {
-      "label": "The vintage connection",
-      "heading": "Joinery before decoration",
+      "label": "The vintage eye",
+      "heading": "A mechanical world in miniature",
       "paragraphs": [
-        "A cabinet can look effortless from the front while a drawer quietly reveals dovetails, runners, repairs and the decisions of its maker. That hidden construction is the vintage detail that best explains Daan's role. The strongest systems, like the strongest furniture, make their structure readable when somebody needs to inspect or repair it.",
-        "PatinaHall also deals in exceptions rather than identical units. A piece may have an uncertain maker, a replaced handle, several useful photographs and only one available example. The architecture has to preserve that uneven reality instead of forcing every object into false precision."
+        "Old mechanical watches appeal to Daan because a small case can hold an entire legible system. Gears, springs and hands cooperate quietly, and a good repair respects both the mechanism and the evidence of the life around it.",
+        "He is especially drawn to the 1920s and 1930s, when geometry, industrial confidence and careful ornament often met in the same object. The attraction is not nostalgia for a flawless past; it is the clarity with which construction and style can still speak to one another."
       ]
     },
     {
-      "label": "What this changes",
-      "heading": "Room for the object to remain particular",
+      "label": "At PatinaHall",
+      "heading": "Making complicated systems easier to read",
       "paragraphs": [
-        "The practical result is not an architecture diagram on a buyer's screen. It is the ability to add a new store, improve a guide or change how an object is described without making the marketplace feel less trustworthy.",
-        "Daan's profile pairs system blocks with a visible cabinet joint because PatinaHall needs both kinds of thinking: an overview of how the parts connect and enough curiosity to look closely at one small construction detail."
+        "As Lead Software Engineer, Daan looks across the routes that connect seller tools, catalogue preparation, public discovery and the handoff back to an independent store. His job is to decide which ideas belong together, which must stay separate and how change can move without surprising everything around it.",
+        "The same instinct that studies a climbing wall or a watch movement keeps PatinaHall's architecture calm and repairable. Buyers should see a clear catalogue, sellers should understand what the system is doing and unusual objects should never be forced into false precision merely to make the software look neat."
       ]
     }
   ],
   "image": {
-    "url": "https://patinahall.github.io/assets/people/daan-vermeer-0a1fc97442b48394.jpg",
-    "alt": "Editorial illustration of Daan beside a laptop, system diagrams and an open vintage cabinet drawer showing dovetail joints.",
+    "url": "https://patinahall.github.io/assets/people/daan-vermeer-8c1cc38eb4df58a0.jpg",
+    "alt": "Watercolour editorial portrait of Daan with a vintage camera, climbing gear, mechanical watches and fragments of old architecture.",
     "width": 1536,
     "height": 1024
   },

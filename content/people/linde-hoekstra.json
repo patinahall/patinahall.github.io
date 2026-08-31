@@ -5,47 +5,47 @@
   "name": "Linde Hoekstra",
   "role": "Search & Data Engineer",
   "theme": "search",
-  "description": "Meet the role represented by Linde Hoekstra and see how search engineering turns the uneven language of vintage furniture into useful paths for discovery.",
-  "lede": "Linde represents the work of helping people find the right piece without flattening a varied catalogue into a few broad labels. Her search and data role turns descriptions, materials, forms and uncertain facts into useful signals while keeping room for discovery.",
+  "description": "Linde Hoekstra is a dancer, walker and Search & Data Engineer who keeps a notebook of found phrases, memorable places and the visual world of theatre.",
+  "lede": "Linde moves between dance studios and walking trails with a small notebook close at hand. It fills with overheard phrases and places worth returning to: fragments that may seem unrelated until rhythm, context or a repeated detail draws a line between them.",
   "focus": [
-    "Search engineering",
-    "Data modelling",
-    "Visual vocabulary"
+    "Dance",
+    "Walking trails",
+    "Theatre ephemera"
   ],
   "principle": {
-    "label": "Working principle",
-    "heading": "Search begins by naming the differences that matter.",
-    "body": "Two objects can share a category and still answer completely different needs. Useful search pays attention to construction, material, scale, function and evidence rather than assuming that one fashionable style label explains everything."
+    "label": "A way of noticing",
+    "heading": "Notice first. Name the pattern second.",
+    "body": "Dance gives Linde a feel for rhythm before it has to be explained. Walking and writing slow the same instinct down: a phrase, place or repeated shape earns a line in the notebook before she decides what it might belong with."
   },
   "sections": [
     {
-      "label": "The profession",
-      "heading": "From uneven descriptions to useful signals",
+      "label": "Dance, trails & a notebook",
+      "heading": "Collecting fragments without flattening them",
       "paragraphs": [
-        "Vintage catalogues do not arrive with one shared vocabulary. A seller may describe a low cabinet, credenza, sideboard or dressoir; another may lead with a maker, material or decade. Search engineering creates enough structure for those descriptions to meet without rewriting every seller in the same voice.",
-        "Linde's role asks which attributes genuinely help a person decide and which only make the data look tidy. Dimensions, material, object type and availability can be concrete. Maker and date may carry uncertainty. The model has to preserve both."
+        "Dance is where Linde experiences structure through movement. A repeated phrase can return with a different weight, and a small change in timing can make the whole sequence feel new. She likes the discipline of repetition without sameness.",
+        "On long walks, a pocket-sized notebook becomes an archive of places and language. Linde records an overheard phrase or a doorway worth finding again. The value lies in the fragment and the attention it awakened."
       ]
     },
     {
-      "label": "The vintage connection",
-      "heading": "Looking twice is a search skill",
+      "label": "The vintage eye",
+      "heading": "Art Deco after the curtain rises",
       "paragraphs": [
-        "At first glance, two chairs may share a silhouette. Look again and the arms, joinery, upholstery, seat height or evidence of repair begin to separate them. That repeated act of comparison is the vintage counterpart to Linde's work: finding the small distinctions that change a result from merely similar to genuinely relevant.",
-        "Her archival visual language uses object cards, material samples and overlapping index layers. It presents search as a way of organising attention, not as a magic box that always knows what a buyer meant."
+        "Art Deco appeals to Linde because geometry never quite suppresses performance. A sharp line can still feel theatrical; symmetry can frame an entrance; gold, black and saturated colour can turn an ordinary announcement into an event.",
+        "Old theatre posters bring that world closest. They preserve a date, a typeface and a promise made to an audience that has long since gone home. Linde enjoys the way a single sheet can hold design, place and anticipation together."
       ]
     },
     {
-      "label": "What this changes",
-      "heading": "Discovery without a perfect query",
+      "label": "At PatinaHall",
+      "heading": "Helping people find what they cannot yet name",
       "paragraphs": [
-        "Not every visitor arrives knowing a designer's name or the accepted term for a form. A good catalogue should support precise searches and still reward someone who begins with a room, a material or a half-remembered shape.",
-        "The search role helps PatinaHall create those multiple entrances while keeping the evidence behind each object visible. The best result is not always the most famous one; sometimes it is the piece a buyer could not yet name."
+        "As Search & Data Engineer, Linde works with catalogues that do not share one vocabulary. A seller may say low cabinet, credenza, sideboard or dressoir; another may begin with a maker, material or decade. Her task is to help those descriptions meet without rewriting every store in the same voice.",
+        "The notebook instinct matters here. PatinaHall should support precise searches and still reward someone who begins with a room, a material or a half-remembered shape. The best result is not always the most famous object; sometimes it is the piece a buyer could not yet name."
       ]
     }
   ],
   "image": {
-    "url": "https://patinahall.github.io/assets/people/linde-hoekstra-4fb6890e9f7c1942.jpg",
-    "alt": "Archival editorial collage of Linde comparing chair cards among furniture silhouettes, wood samples and layered index shapes.",
+    "url": "https://patinahall.github.io/assets/people/linde-hoekstra-4c8fe7f35f46234f.jpg",
+    "alt": "Archival collage portrait of Linde with a notebook between a dance studio, walking trail and Art Deco theatre imagery.",
     "width": 1536,
     "height": 1024
   },

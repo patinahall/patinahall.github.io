@@ -17,9 +17,9 @@ const updatesFeedName = "PatinaHall Updates";
 const updatesFeedDescription =
   "Official, dated updates from PatinaHall — a marketplace for vintage furniture, antiques, design objects, and independent stores.";
 const siteDescription =
-  "Official updates and editorial role profiles from PatinaHall — a marketplace for vintage furniture, antiques, design objects, and independent stores.";
+  "Official updates and personal editorial profiles from PatinaHall — a marketplace for vintage furniture, antiques, design objects, and independent stores.";
 const aboutUpdatedAt = "2026-08-31";
-const peopleUpdatedAt = "2026-08-31";
+const peopleUpdatedAt = "2026-09-01";
 const privacyUpdatedAt = "2026-08-16";
 const socialProfiles = Object.freeze([
   "https://www.linkedin.com/company/patinahall/",
@@ -38,6 +38,13 @@ const allowedPeopleThemes = new Set([
   "quality",
   "search"
 ]);
+const peopleThemeColors = Object.freeze({
+  architecture: "#e8e2d8",
+  interface: "#f0e4e3",
+  platform: "#ece1cf",
+  quality: "#dfe9e1",
+  search: "#dde7e7"
+});
 const allowedProfileLinkOrigins = Object.freeze({
   LinkedIn: "https://www.linkedin.com",
   Peerlist: "https://peerlist.io"
@@ -112,7 +119,6 @@ const validatePost = (value, fileName) => {
         boundedText(paragraph, `${fileName}.sections[${sectionIndex}].paragraphs[${paragraphIndex}]`, 1_200))
     };
   });
-
   assert(value.callToAction !== null && typeof value.callToAction === "object",
     `${fileName}.callToAction is invalid`);
   const href = boundedText(value.callToAction.href, `${fileName}.callToAction.href`, 240);
@@ -236,6 +242,8 @@ const validatePerson = (value, fileName) => {
         ))
     };
   });
+  assert(sections.at(-1).label === "At PatinaHall",
+    `${fileName}.sections must end with At PatinaHall`);
 
   assert(value.image !== null && typeof value.image === "object",
     `${fileName}.image is invalid`);
@@ -429,7 +437,7 @@ const footer = `
     <small>© 2026 PatinaHall</small>
   </footer>`;
 
-const layout = ({ title, description, canonicalPath, body, pageClass = "", structuredData, image }) => `<!doctype html>
+const layout = ({ title, description, canonicalPath, body, pageClass = "", structuredData, image, themeColor = "#f4f0e8" }) => `<!doctype html>
 <html lang="en">
 <head>
   <script src="/assets/analytics-consent.js" defer></script>
@@ -437,7 +445,7 @@ const layout = ({ title, description, canonicalPath, body, pageClass = "", struc
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="${escapeHtml(description)}">
   <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#f4f0e8">
+  <meta name="theme-color" content="${escapeHtml(themeColor)}">
   <title>${escapeHtml(title)}</title>
   <link rel="canonical" href="${siteOrigin}${canonicalPath}">
   <link rel="alternate" type="application/rss+xml" title="${updatesFeedName}" href="${siteOrigin}/feed.xml">
@@ -505,11 +513,11 @@ const homeBody = `
       <header>
         <div>
           <p class="eyebrow">Behind PatinaHall</p>
-          <h2 id="people-teaser-title">Five disciplines, one considered marketplace.</h2>
+          <h2 id="people-teaser-title">Five people, five ways of paying attention.</h2>
         </div>
         <div class="people-teaser__intro">
-          <p>Meet the team-managed roles shaping PatinaHall, from the architecture beneath the catalogue to the quality checks around every release.</p>
-          <a href="/people/">Meet the roles →</a>
+          <p>Meet the climber, rider, chess player, dancer and book restorer behind five specialist roles—and discover the vintage worlds they notice along the way.</p>
+          <a href="/people/">Meet the people →</a>
         </div>
       </header>
       <div class="people-teaser__roles">
@@ -611,7 +619,7 @@ const peopleCard = (person, headingLevel = 2) => `
       <p class="eyebrow">${escapeHtml(person.role)}</p>
       <h${headingLevel}><a href="/people/${person.slug}/">${escapeHtml(person.name)}</a></h${headingLevel}>
       <p>${escapeHtml(person.description)}</p>
-      <a class="people-card__link" href="/people/${person.slug}/" aria-label="Meet the role represented by ${escapeHtml(person.name)}">Read the role portrait →</a>
+      <a class="people-card__link" href="/people/${person.slug}/" aria-label="Read ${escapeHtml(person.name)}'s profile">Read the profile →</a>
     </div>
   </article>`;
 
@@ -619,15 +627,15 @@ const peopleBody = `
   <main class="people-index">
     <header class="people-intro">
       <div>
-        <p class="eyebrow">Behind PatinaHall</p>
-        <h1>The roles behind a considered marketplace.</h1>
+        <p class="eyebrow">People at PatinaHall</p>
+        <h1>Meet the people behind the work.</h1>
       </div>
       <div class="people-intro__copy">
-        <p>Five engineering disciplines shape how independent stores, one-off objects and careful buyers meet on PatinaHall. Each portrait connects a professional practice to a different way of looking at vintage furniture.</p>
+        <p>Climbing routes, watercolour, chessboards, walking notebooks and old paper come first. Each profile begins with a personal story, follows a distinct love of vintage things and saves PatinaHall for the final chapter.</p>
         <p class="people-disclosure" data-persona-disclosure>These are team-managed digital personas representing the roles behind PatinaHall, not employee records. Their editorial images are AI-generated.</p>
       </div>
     </header>
-    <section class="people-grid" aria-label="PatinaHall role profiles">
+    <section class="people-grid" aria-label="PatinaHall personal profiles">
       ${people.map((person) => peopleCard(person)).join("")}
     </section>
   </main>`;
@@ -635,9 +643,9 @@ const peopleBody = `
 const peopleData = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  name: "The roles behind PatinaHall",
+  name: "People at PatinaHall",
   description:
-    "Editorial portraits of the five team-managed specialist roles represented behind PatinaHall.",
+    "Personal editorial portraits of five team-managed specialist personas represented behind PatinaHall.",
   url: `${siteOrigin}/people/`,
   publisher: organizationData,
   about: { "@id": organizationId },
@@ -652,7 +660,7 @@ const peopleData = {
 generated.push(["people/index.html", layout({
   title: "People · PatinaHall",
   description:
-    "Meet the five team-managed specialist roles behind PatinaHall and see how their engineering disciplines connect with vintage furniture.",
+    "Meet five personal editorial profiles shaped by climbing, horses, chess, dance, book restoration and a shared curiosity about vintage objects.",
   canonicalPath: "/people/",
   body: peopleBody,
   pageClass: "people-page",
@@ -665,7 +673,7 @@ for (const [personIndex, person] of people.entries()) {
     `<li>${escapeHtml(item)}</li>`
   ).join("");
   const sections = person.sections.map((section) => `
-        <section>
+        <section class="person-section${section.label === "At PatinaHall" ? " person-section--patinahall" : ""}">
           <p class="eyebrow">${escapeHtml(section.label)}</p>
           <h2>${escapeHtml(section.heading)}</h2>
           ${section.paragraphs.map((paragraph) =>
@@ -678,21 +686,21 @@ for (const [personIndex, person] of people.entries()) {
   const personBody = `
   <main class="person-page">
     <article class="person-profile person-profile--${escapeHtml(person.theme)}">
+      <a class="person-hero__back" href="/people/">← All profiles</a>
       <header class="person-hero">
-        <a class="person-hero__back" href="/people/">← All roles</a>
         <div class="person-hero__heading">
-          <p class="eyebrow">${escapeHtml(person.role)}</p>
+          <p class="eyebrow">Personal profile</p>
           <h1>${escapeHtml(person.name)}</h1>
           <p class="person-hero__lede">${escapeHtml(person.lede)}</p>
-          <ul class="person-focus" aria-label="${escapeHtml(person.name)} role themes">
+          <ul class="person-focus" aria-label="${escapeHtml(person.name)} interests">
             ${focus}
           </ul>
         </div>
+        <figure class="person-media">
+          <img src="${escapeHtml(person.image.src)}" alt="${escapeHtml(person.image.alt)}" width="${person.image.width}" height="${person.image.height}" fetchpriority="high">
+          <figcaption>AI-generated editorial portrait for a team-managed PatinaHall profile.</figcaption>
+        </figure>
       </header>
-      <figure class="person-media">
-        <img src="${escapeHtml(person.image.src)}" alt="${escapeHtml(person.image.alt)}" width="${person.image.width}" height="${person.image.height}" fetchpriority="high">
-        <figcaption>AI-generated editorial illustration for a team-managed PatinaHall role persona.</figcaption>
-      </figure>
       <div class="person-layout">
         <aside class="person-principle">
           <p class="eyebrow">${escapeHtml(person.principle.label)}</p>
@@ -711,7 +719,7 @@ for (const [personIndex, person] of people.entries()) {
         <p><strong>${escapeHtml(person.name)}</strong> is a team-managed digital persona representing the ${escapeHtml(person.role)} role behind PatinaHall. This PatinaHall-written page describes the discipline, not an individual employment record or personal biography. The editorial image is AI-generated.</p>
       </aside>
       <a class="person-next" href="/people/${nextPerson.slug}/">
-        <span>Next role · ${escapeHtml(nextPerson.role)}</span>
+        <span>Next profile</span>
         <strong>${escapeHtml(nextPerson.name)} →</strong>
       </a>
     </article>
@@ -719,7 +727,7 @@ for (const [personIndex, person] of people.entries()) {
   const personData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: `${person.name} — ${person.role} at PatinaHall`,
+    name: `${person.name} · People at PatinaHall`,
     description: person.description,
     url: `${siteOrigin}${canonicalPath}`,
     publisher: organizationData,
@@ -734,13 +742,14 @@ for (const [personIndex, person] of people.entries()) {
     }
   };
   generated.push([`people/${person.slug}/index.html`, layout({
-    title: `${person.name}, ${person.role} · PatinaHall`,
+    title: `${person.name} · People at PatinaHall`,
     description: person.description,
     canonicalPath,
     body: personBody,
     pageClass: `person-page-body person-page-body--${person.theme}`,
     structuredData: personData,
-    image: person.image
+    image: person.image,
+    themeColor: peopleThemeColors[person.theme]
   })]);
 }
 
@@ -825,15 +834,15 @@ const aboutBody = `
     </section>
     <section class="about-people" aria-labelledby="about-people-title">
       <p class="eyebrow">Behind PatinaHall</p>
-      <h2 id="about-people-title">Meet the disciplines shaping the marketplace.</h2>
-      <p>Our People section expands the five team-managed roles represented behind PatinaHall, connecting architecture, frontend, platform, search and quality work with the ways we inspect and understand vintage furniture.</p>
-      <p>The profiles are editorial role portraits, not employee records or personal biographies, and their illustrations are AI-generated.</p>
-      <a class="article__cta" href="/people/">Meet the roles <span aria-hidden="true">→</span></a>
+      <h2 id="about-people-title">Meet the people before the job titles.</h2>
+      <p>Our People section begins with five distinct worlds: climbing and old buildings, horses and watercolour, chess and maps, dance and theatre, swimming and book restoration. Each portrait then follows that way of paying attention into a specialist profession and, only at the end, into PatinaHall.</p>
+      <p>The profiles are team-managed editorial personas rather than employee records, and their illustrations are AI-generated.</p>
+      <a class="article__cta" href="/people/">Meet the people <span aria-hidden="true">→</span></a>
     </section>
     <section class="about-publication" aria-labelledby="about-publication-title">
       <p class="eyebrow">About this publication</p>
       <h2 id="about-publication-title">Updates and the roles behind them.</h2>
-      <p>PatinaHall publishes short, dated notes about meaningful releases and evergreen editorial portraits of the roles behind the work. It does not mirror the catalogue or repeat buyer guides.</p>
+      <p>PatinaHall publishes short, dated notes about meaningful releases and evergreen personal portraits of the personas behind five specialist roles. It does not mirror the catalogue or repeat buyer guides.</p>
       <p>Explore current pieces and Store pages on <a href="${marketplaceOrigin}/">patinahall.com</a>, read practical advice in <a href="${marketplaceOrigin}/guides">Guides</a>, find longer stories in the <a href="${marketplaceOrigin}/journal">PatinaHall Journal</a>, or follow product work suitable for public discussion in the <a href="https://github.com/patinahall/patinahall.github.io/issues">public roadmap on GitHub</a>.</p>
     </section>
   </main>`;
@@ -975,11 +984,11 @@ Official dated updates: ${siteOrigin}/
 
 ## People profiles
 
-The People section contains PatinaHall-written editorial portraits of five team-managed digital personas representing specialist roles. They are not employee records or natural-person biographies, and their editorial images are AI-generated.
+The People section contains PatinaHall-written personal portraits of five team-managed digital personas representing specialist roles. Each begins with reviewed interests and a distinct vintage point of view, then closes with the role at PatinaHall. They are not employee records or natural-person biographies, and their editorial images are AI-generated.
 
 ## Publication boundary
 
-This publication contains short, factual release notes and evergreen editorial role profiles. Product listings, Store pages, evergreen Guides, and longer Journal stories remain canonical on patinahall.com and are not mirrored here.
+This publication contains short, factual release notes and evergreen editorial profiles. Product listings, Store pages, evergreen Guides, and longer Journal stories remain canonical on patinahall.com and are not mirrored here.
 `]);
 
 const mismatches = [];

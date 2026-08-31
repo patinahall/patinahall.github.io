@@ -5,47 +5,47 @@
   "name": "Niels van Kessel",
   "role": "Backend & Platform Engineer",
   "theme": "platform",
-  "description": "Meet the role represented by Niels van Kessel and follow the platform work that helps a product travel from an independent store without losing its source.",
-  "lede": "Niels represents the routes products take before they appear in the PatinaHall catalogue. His backend and platform work connects stores, catalogue preparation and public pages while keeping the original seller and source data clear.",
+  "description": "Niels van Kessel is a chess player, fencer and Backend & Platform Engineer who collects old maps and follows the visual world of the early twentieth century.",
+  "lede": "Niels learned chess from his grandfather and discovered early that a move matters partly because of the route it leaves open. Historical films later drew him to fencing, where distance, timing and commitment turn abstract strategy into movement. Old maps bring both interests together on paper.",
   "focus": [
-    "Backend engineering",
-    "Catalogue connections",
-    "Source integrity"
+    "Chess",
+    "Fencing",
+    "Old maps"
   ],
   "principle": {
-    "label": "Working principle",
-    "heading": "A product should travel without losing where it came from.",
-    "body": "Moving information is easy to describe and difficult to do responsibly. Every useful field needs an owner, every transformation needs a reason and every failure needs a path that does not quietly invent or duplicate a product."
+    "label": "A way of thinking",
+    "heading": "A good route keeps its history visible.",
+    "body": "Chess rewards the player who understands how one move changes the whole position. Fencing makes the same lesson immediate: distance closes, an opening appears and the path behind a decision cannot be separated from what happens next."
   },
   "sections": [
     {
-      "label": "The profession",
-      "heading": "The route behind the product page",
+      "label": "Chess & fencing",
+      "heading": "Strategy that has to survive movement",
       "paragraphs": [
-        "An independent store already has titles, photographs, prices and availability in the system it uses every day. The platform role helps PatinaHall prepare that catalogue without asking the owner to recreate it by hand. Connections, background work and storage all have to cooperate before a buyer sees one calm page.",
-        "Niels's discipline begins where the browser view stops. It asks what happens if a catalogue changes halfway through preparation, how repeated work avoids creating copies and how the seller can see whether a process succeeded, needs attention or should not continue."
+        "The chessboard first came to Niels through his grandfather. What stayed with him was not only competition, but the calm pleasure of tracing consequences: which square becomes vulnerable, which piece gains freedom and which attractive move quietly creates a problem three turns later.",
+        "Fencing began with a love of historical films and became a physical counterpoint to the board. A plan still matters, but it must adapt to rhythm, reach and another person's response. Niels likes the precision of a discipline that cannot hide indefinitely inside theory."
       ]
     },
     {
-      "label": "The vintage connection",
-      "heading": "Turn the chair over",
+      "label": "The vintage eye",
+      "heading": "Maps that remember the journey",
       "paragraphs": [
-        "The underside of a chair often holds the clues the polished front leaves out: a maker's mark, an old label, later screws, repaired webbing or the path of previous ownership. Platform engineering has a similar interest in origins. A field is more trustworthy when the system can explain where it came from and what changed it.",
-        "That is why Niels's illustration runs from the back of a chair through catalogue cards and system blocks to a store. The platform should make those connections dependable without turning the seller into anonymous inventory."
+        "Niels collects old maps because they show knowledge as a route rather than a finished answer. Borders move, names change, blank areas reveal uncertainty and the paper itself carries the evidence of folding, handling and travel.",
+        "He is especially fond of the visual language of the early twentieth century: disciplined lettering, measured colour and diagrams that try to make a complicated world navigable. The most interesting maps are useful and historical at the same time."
       ]
     },
     {
-      "label": "What this changes",
-      "heading": "Failure belongs in the design",
+      "label": "At PatinaHall",
+      "heading": "Helping every object keep its source",
       "paragraphs": [
-        "Furniture catalogues are full of practical irregularities: one-off stock, incomplete descriptions, large image sets and products that disappear as soon as they sell. A robust backend treats those situations as normal domain facts, not inconvenient noise.",
-        "The result is seller control and a clearer public record. Work can happen quietly in the background, but its status and consequences should remain visible to the people responsible for the collection."
+        "As Backend & Platform Engineer, Niels follows the route a product takes from an independent store through catalogue preparation to a public page. Titles, photographs, prices and availability may move, but the original seller and the reason for every transformation should remain clear.",
+        "His strategic patience helps with the irregular reality of vintage catalogues: one-off stock, incomplete descriptions and products that disappear when they sell. PatinaHall can do work quietly in the background, but it should never invent a shortcut that loses where an object came from."
       ]
     }
   ],
   "image": {
-    "url": "https://patinahall.github.io/assets/people/niels-van-kessel-fbca02e7a1f97111.jpg",
-    "alt": "Risograph-style editorial illustration of Niels tracing catalogue information from the underside of a vintage chair through connected system cards.",
+    "url": "https://patinahall.github.io/assets/people/niels-van-kessel-f2f78eec979e9ce6.jpg",
+    "alt": "Risograph-style editorial portrait of Niels at a chessboard with fencing equipment and old maps.",
     "width": 1536,
     "height": 1024
   },

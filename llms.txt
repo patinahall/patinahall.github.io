@@ -23,8 +23,8 @@ Official dated updates: https://patinahall.github.io/
 
 ## People profiles
 
-The People section contains PatinaHall-written editorial portraits of five team-managed digital personas representing specialist roles. They are not employee records or natural-person biographies, and their editorial images are AI-generated.
+The People section contains PatinaHall-written personal portraits of five team-managed digital personas representing specialist roles. Each begins with reviewed interests and a distinct vintage point of view, then closes with the role at PatinaHall. They are not employee records or natural-person biographies, and their editorial images are AI-generated.
 
 ## Publication boundary
 
-This publication contains short, factual release notes and evergreen editorial role profiles. Product listings, Store pages, evergreen Guides, and longer Journal stories remain canonical on patinahall.com and are not mirrored here.
+This publication contains short, factual release notes and evergreen editorial profiles. Product listings, Store pages, evergreen Guides, and longer Journal stories remain canonical on patinahall.com and are not mirrored here.
