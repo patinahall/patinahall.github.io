@@ -714,7 +714,7 @@ for (const [personIndex, person] of people.entries()) {
       </div>
       <aside class="person-disclosure" data-persona-disclosure aria-label="About this profile">
         <p class="eyebrow">About this profile</p>
-        <p><strong>${escapeHtml(person.name)}</strong> is the ${escapeHtml(person.role)} behind PatinaHall. This PatinaHall-written page describes the discipline, not an individual employment record or personal biography.</p>
+        <p><strong>${escapeHtml(person.name)}</strong> is the ${escapeHtml(person.role)} behind PatinaHall.</p>
       </aside>
       <a class="person-next" href="/people/${nextPerson.slug}/">
         <span>Next profile</span>
