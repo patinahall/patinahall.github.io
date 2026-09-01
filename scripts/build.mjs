@@ -714,7 +714,7 @@ for (const [personIndex, person] of people.entries()) {
       </div>
       <aside class="person-disclosure" data-persona-disclosure aria-label="About this profile">
         <p class="eyebrow">About this profile</p>
-        <p><strong>${escapeHtml(person.name)}</strong> is a team-managed digital persona representing the ${escapeHtml(person.role)} role behind PatinaHall. This PatinaHall-written page describes the discipline, not an individual employment record or personal biography.</p>
+        <p><strong>${escapeHtml(person.name)}</strong> is the ${escapeHtml(person.role)} behind PatinaHall. This PatinaHall-written page describes the discipline, not an individual employment record or personal biography.</p>
       </aside>
       <a class="person-next" href="/people/${nextPerson.slug}/">
         <span>Next profile</span>
@@ -982,7 +982,7 @@ Official dated updates: ${siteOrigin}/
 
 ## People profiles
 
-The People section contains PatinaHall-written personal portraits of six team-managed digital personas representing specialist roles. Each begins with reviewed interests and a distinct vintage point of view, then closes with the role at PatinaHall. They are not employee records or natural-person biographies.
+The People section contains PatinaHall-written personal portraits of six team-managed personas representing specialist roles. Each begins with reviewed interests and a distinct vintage point of view, then closes with the role at PatinaHall. They are not employee records or natural-person biographies.
 
 ## Publication boundary
 
