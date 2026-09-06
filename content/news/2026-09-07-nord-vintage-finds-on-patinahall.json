@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "slug": "nord-vintage-finds-on-patinahall",
+  "title": "Nord Vintage’s finds are now on PatinaHall",
+  "description": "A new friendship has brought more furniture to explore: discover Nord Vintage’s selection, from an extending rosewood table to teak chairs with newly woven seats.",
+  "publishedAt": "2026-09-07",
+  "label": "Store update",
+  "sections": [
+    {
+      "paragraphs": [
+        "In August, we welcomed Nord Vintage as one of the independent shops joining PatinaHall. Now that introduction comes with something to explore: pieces from Nord Vintage Furniture are available in our public catalogue.",
+        "We are pleased to see this friendship take shape around actual furniture. A shop’s character comes through in what it chooses, and the best introduction is often a closer look at a few of those choices."
+      ]
+    },
+    {
+      "heading": "A table with room for company",
+      "paragraphs": [
+        "Start with the rosewood dining table listed by Nord Vintage as a design by Arne Vodder. Its gently curved ends give it a quiet outline, while two extension leaves take the listed length from 150 to 250 cm. It is the kind of detail that turns an attractive photograph into a thought about your own home: the everyday table, and the table when everyone comes over."
+      ]
+    },
+    {
+      "heading": "Four chairs, ready for another chapter",
+      "paragraphs": [
+        "Another place to pause is the set of four teak dining chairs listed as H. W. Klein for Bramin. Sculpted backrests meet newly hand-woven paper-cord seats; Nord Vintage describes the set as fully restored. The contrast between the older frames and renewed seating is part of what makes vintage furniture interesting to live with."
+      ]
+    },
+    {
+      "heading": "Meet the pieces, then meet the seller",
+      "paragraphs": [
+        "Both examples are linked below. Their listing pages bring together photographs, descriptions, dimensions and the seller’s current price and availability. When something catches your eye, continue directly to Nord Vintage to discuss the piece, delivery and purchase.",
+        "That is the relationship we want PatinaHall to support: more people finding an independent shop’s collection, with the shop still at the centre of the conversation. Welcome again, Nord Vintage. It is good to have your finds here."
+      ]
+    }
+  ],
+  "callToAction": {
+    "label": "Explore the PatinaHall catalogue",
+    "href": "https://patinahall.com/catalog"
+  },
+  "relatedLinks": [
+    {
+      "label": "See Nord Vintage’s rosewood dining table",
+      "href": "https://patinahall.com/products/rosewood-dining-table-designed-by-arne-vodder-57eebf10a17f5df7"
+    },
+    {
+      "label": "See the four teak dining chairs",
+      "href": "https://patinahall.com/products/set-of-4-teak-dining-chairs-by-h-w-klein-for-bramin-0a773fc41c3d3283"
+    }
+  ]
+}
