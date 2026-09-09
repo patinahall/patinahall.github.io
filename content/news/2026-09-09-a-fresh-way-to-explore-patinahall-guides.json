@@ -1,35 +1,28 @@
 {
   "schemaVersion": 1,
   "slug": "a-fresh-way-to-explore-patinahall-guides",
-  "title": "Find your next good read in PatinaHall Guides",
-  "description": "Pictures, clearer topics and useful connections between articles make PatinaHall Guides easier to explore. Start with a piece you love and find advice for the questions that follow.",
+  "title": "PatinaHall Guides gets a new look",
+  "description": "Our 138 Guides now have illustrated previews, nine topic sections and more useful connections between articles, from checking a chair to working out what repairs might cost.",
   "publishedAt": "2026-09-09",
-  "label": "Guides",
+  "label": "Guides update",
   "sections": [
     {
       "paragraphs": [
-        "You’ve found a chair you love. The shape is right, the price looks promising, but the woven seat has seen better days. Is it still usable? What would a new seat cost? One good find can bring a whole afternoon’s worth of questions.",
-        "PatinaHall Guides now has a more inviting way in. Pictures and short article previews help you spot a useful read, while clear topic sections bring the right questions together."
+        "We’ve redesigned PatinaHall Guides. The collection now brings 138 practical articles together in nine topic sections, with pictures and short previews to help you find advice for the piece you are buying, repairing or making room for.",
+        "Chairs and armchairs, tables and desks, storage and lighting each have a place to start. There are also sections for materials and care, rooms and delivery, and buying and research. A featured Guide and recent additions give returning readers something to explore without working through the whole collection again."
       ]
     },
     {
-      "heading": "Start with the piece on your mind",
+      "heading": "From checking a piece to deciding what comes next",
       "paragraphs": [
-        "Nine topic sections let you head straight for chairs and armchairs, tables and desks, storage, lighting and more. Questions about materials, care, room planning and delivery have their own places too.",
-        "A featured Guide and recent additions offer a starting point when you are just looking around. Illustrated cards give you a feel for each article before you open it, whether you are browsing on the sofa or standing beside a piece in a shop."
-      ]
-    },
-    {
-      "heading": "Let one useful answer lead to the next",
-      "paragraphs": [
-        "We’ve also refreshed the connections between articles. Read how to inspect that woven chair seat, then follow through to the cost of replacing it. The next article helps turn what you have noticed into a more informed buying decision.",
-        "Each Guide now gives you a direct route back to its topic, so you can carry on exploring chairs without starting again at the top of the collection.",
-        "Have a listing saved, a room to finish or a soft spot for old furniture? Bring it along. There is plenty to discover in Guides."
+        "We’ve also updated the related reading. After learning how to inspect a woven chair seat, you can go straight to an article comparing the cost of replacing it. Six charming chairs can, after all, come with six rather less charming repair bills.",
+        "The same approach connects upholstery checks with reupholstery budgets, and lighting inspections with what to include in a rewiring quote. Each Guide now links back to its topic, taking you straight to the other chair or lighting articles when you want to keep reading.",
+        "The updated Guides are live now. Try the two chair-seat articles below, or open the directory and start with the piece you have in mind."
       ]
     }
   ],
   "callToAction": {
-    "label": "Find your next Guide",
+    "label": "Explore the updated Guides",
     "href": "https://patinahall.com/guides"
   },
   "relatedLinks": [
