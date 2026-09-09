@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "slug": "a-fresh-way-to-explore-patinahall-guides",
+  "title": "Find your next good read in PatinaHall Guides",
+  "description": "Pictures, clearer topics and useful connections between articles make PatinaHall Guides easier to explore. Start with a piece you love and find advice for the questions that follow.",
+  "publishedAt": "2026-09-09",
+  "label": "Guides",
+  "sections": [
+    {
+      "paragraphs": [
+        "You’ve found a chair you love. The shape is right, the price looks promising, but the woven seat has seen better days. Is it still usable? What would a new seat cost? One good find can bring a whole afternoon’s worth of questions.",
+        "PatinaHall Guides now has a more inviting way in. Pictures and short article previews help you spot a useful read, while clear topic sections bring the right questions together."
+      ]
+    },
+    {
+      "heading": "Start with the piece on your mind",
+      "paragraphs": [
+        "Nine topic sections let you head straight for chairs and armchairs, tables and desks, storage, lighting and more. Questions about materials, care, room planning and delivery have their own places too.",
+        "A featured Guide and recent additions offer a starting point when you are just looking around. Illustrated cards give you a feel for each article before you open it, whether you are browsing on the sofa or standing beside a piece in a shop."
+      ]
+    },
+    {
+      "heading": "Let one useful answer lead to the next",
+      "paragraphs": [
+        "We’ve also refreshed the connections between articles. Read how to inspect that woven chair seat, then follow through to the cost of replacing it. The next article helps turn what you have noticed into a more informed buying decision.",
+        "Each Guide now gives you a direct route back to its topic, so you can carry on exploring chairs without starting again at the top of the collection.",
+        "Have a listing saved, a room to finish or a soft spot for old furniture? Bring it along. There is plenty to discover in Guides."
+      ]
+    }
+  ],
+  "callToAction": {
+    "label": "Find your next Guide",
+    "href": "https://patinahall.com/guides"
+  },
+  "relatedLinks": [
+    {
+      "label": "How to inspect a woven chair seat",
+      "href": "https://patinahall.com/guides/inspecting-woven-chair-seats"
+    },
+    {
+      "label": "What does a new woven chair seat cost?",
+      "href": "https://patinahall.com/guides/cost-of-replacing-woven-chair-seats"
+    }
+  ]
+}
