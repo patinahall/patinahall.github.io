@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "slug": "three-hundred-guides-for-buying-vintage",
+  "title": "PatinaHall Guides have grown to 320 practical answers",
+  "description": "The PatinaHall Guides now cover 320 practical questions about buying vintage furniture: condition, measurements, delivery, materials, repairs and what to ask a seller before paying.",
+  "publishedAt": "2026-10-15",
+  "label": "Guides update",
+  "sections": [
+    {
+      "heading": "From seven guides to three hundred and twenty",
+      "paragraphs": [
+        "When the Guides section opened it answered seven questions: how to buy well, how to read condition, how to measure for delivery, how to choose dining chairs, how to measure a table, how to inspect vintage lighting, and the practical difference between a chest, a cabinet and a sideboard.",
+        "The section now holds 320 guides. They are grouped so that a question leads to its neighbours instead of dead-ending: measuring, condition, materials, repairs, delivery, styles and the specific kinds of furniture people search for most."
+      ]
+    },
+    {
+      "heading": "Written for the moment before you decide",
+      "paragraphs": [
+        "Each guide is short enough to read with a listing open in another tab and specific enough to change what you look at next. What to measure before a wall system can go up. Whether a woven seat can be repaired and what that costs. How to tell honest wear from active damage.",
+        "The aim is never to make old furniture look new. It is to let someone understand what age has done to a particular piece before it arrives in their hallway."
+      ]
+    },
+    {
+      "heading": "A calmer way to buy something old",
+      "paragraphs": [
+        "Vintage buying goes wrong in predictable ways: a cabinet that will not turn on the stairs, a set of chairs where only one was photographed, a beautiful lamp with a cable nobody looked at. Almost all of it is avoidable with one good question asked early.",
+        "PatinaHall exists so that distinctive furniture is easier to find and easier to understand. The Guides are the part of that work you can use before you spend anything."
+      ]
+    }
+  ],
+  "callToAction": {
+    "label": "Explore PatinaHall Guides",
+    "href": "https://patinahall.com/guides"
+  }
+}

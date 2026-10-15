@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "slug": "store-profiles-introduce-every-shop",
+  "title": "Every PatinaHall store now introduces the people behind it",
+  "description": "Every store in the PatinaHall directory now has a published profile: a portrait, a logo and a personal introduction from the people who find, repair and sell the furniture.",
+  "publishedAt": "2026-10-15",
+  "label": "Store update",
+  "sections": [
+    {
+      "heading": "A shop is a person with a point of view",
+      "paragraphs": [
+        "A good vintage shop is not a warehouse. Someone decides which piece is worth carrying down a narrow staircase, which repair is honest and which patina should be left exactly as it is. Those decisions are the reason two shops selling the same era feel nothing alike.",
+        "Until now a store could arrive on PatinaHall as little more than a name above a grid of products. Every store in the directory now has a profile of its own, so a buyer can meet the shop before deciding to trust one of its pieces."
+      ]
+    },
+    {
+      "heading": "A portrait, a logo and words of their own",
+      "paragraphs": [
+        "Each profile leads with the shop's own photograph and introduction rather than a summary of its stock. One store is shown through its restoration workshop, another through the people who run it, another through the furniture as it waits to be collected.",
+        "Logos and introductions carry into the store directory as well, so browsing shops means reading a row of distinct places instead of a list of labels. Every image and every sentence is published with the shop's agreement."
+      ]
+    },
+    {
+      "heading": "Why this matters for buyers",
+      "paragraphs": [
+        "Buying something old is a decision about a specific object in the care of a specific person. Knowing who prepared a piece, where they look for furniture and what they refuse to sell tells a buyer something that no condition report can.",
+        "PatinaHall is a marketplace for vintage furniture, and this is how we bring buyers to the people who found the piece, not just to a photograph of it."
+      ]
+    }
+  ],
+  "callToAction": {
+    "label": "Explore stores on PatinaHall",
+    "href": "https://patinahall.com/stores"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "slug": "nopcommerce-catalogue-import",
+  "title": "PatinaHall can now bring in nopCommerce catalogues",
+  "description": "Vintage furniture shops running a nopCommerce storefront can now bring their existing catalogue and product photography into PatinaHall, while the original shop stays the source.",
+  "publishedAt": "2026-10-15",
+  "label": "Seller update",
+  "sections": [
+    {
+      "heading": "One more platform we read instead of asking you to retype",
+      "paragraphs": [
+        "A shop that already runs its own online store has done the hard work once: photographed every piece, described it, priced it. Asking that shop to do it again for PatinaHall means maintaining two catalogues, and the second one is stale within a month.",
+        "nopCommerce storefronts now join the platforms PatinaHall can read directly, alongside the catalogue imports already in use. A nopCommerce shop's products — and the photography published with them — can be brought in and offered to buyers here."
+      ]
+    },
+    {
+      "heading": "Your shop stays the source",
+      "paragraphs": [
+        "Connecting a storefront does not publish anything. The catalogue is prepared first, and the owner decides which pieces are added and completes the ordinary review for anything buyers will see.",
+        "When the shop changes, the import can be run again: new and changed pieces are brought forward for review, and a piece keeps the same public address on PatinaHall, so a link shared last month still opens the right object today."
+      ]
+    },
+    {
+      "heading": "Less catalogue admin, more time on the floor",
+      "paragraphs": [
+        "PatinaHall is a marketplace for vintage furniture built around zero maintenance for the shop: you keep running the store you already have, and we keep its presence here current.",
+        "If your shop runs on another platform, tell us which one. The list of catalogues we can read directly is still growing."
+      ]
+    }
+  ],
+  "callToAction": {
+    "label": "Open the seller workspace",
+    "href": "https://patinahall.com/seller/"
+  }
+}

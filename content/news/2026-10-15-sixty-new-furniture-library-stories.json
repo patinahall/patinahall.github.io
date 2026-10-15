@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "slug": "sixty-new-furniture-library-stories",
+  "title": "Sixty new Furniture Library stories, from the Bureau du Roi to a Hoosier cabinet",
+  "description": "Sixty new articles have joined the PatinaHall Furniture Library, bringing it to 241 stories about the objects, rooms and workshops behind the furniture people live with.",
+  "publishedAt": "2026-10-15",
+  "label": "Library update",
+  "sections": [
+    {
+      "heading": "Three batches, sixty stories",
+      "paragraphs": [
+        "The Furniture Library grew in three groups of twenty. The first followed furniture through rooms and daily routines, including the Bureau du Roi and the desk reconstructed in full so a reader can see what the king actually sat at.",
+        "The second took on experiments: pieces that argued with the idea of furniture, among them Nanna Ditzel's upholstered landscapes and the Toio, a floor lamp built around a car headlight. The third moved into rooms and workshops, where furniture is made as much as it is used.",
+        "The Library now holds 241 articles."
+      ]
+    },
+    {
+      "heading": "What you can discover",
+      "paragraphs": [
+        "Carlo Scarpa's Soriana and the partnership behind it. Carlo Mollino. Garrick's bed. The Total Furnishing Unit. The Bocca sofa. Serge Mouille's three-arm lamp. Polder. Traccia. The furniture of Chandigarh and of Les Arcs. Isokon.",
+        "Alongside them, quieter objects with just as much to say: how a tambour door rolls out of sight, a Salem worktable, the Hoosier cabinets that organised a kitchen before fitted kitchens existed, a British child's high chair, the Korean soban, the Sitzmaschine, Gallé's plant-inspired furniture and a Chinese table."
+      ]
+    },
+    {
+      "heading": "Pictures that explain, and say what they are",
+      "paragraphs": [
+        "The new articles carry documentary photographs, drawn diagrams and editorial reconstructions. Where an image is a reconstruction rather than a photograph of the object, the article says so plainly — a diagram of how four tools do their work is useful, but only if the reader knows what they are looking at.",
+        "Sources, attribution and uncertain details stay visible, and an exact object is never quietly presented as a whole design or a furniture type."
+      ]
+    },
+    {
+      "heading": "Why we keep writing them",
+      "paragraphs": [
+        "A marketplace for vintage furniture is only as good as its readers' eyes. Someone who knows why a drawer was built that way, or what a repair used to cost, buys better and keeps what they buy for longer.",
+        "The Library is free to read, has no products in it, and exists to make old furniture legible."
+      ]
+    }
+  ],
+  "callToAction": {
+    "label": "Explore the Furniture Library",
+    "href": "https://patinahall.com/furniture-library"
+  },
+  "relatedLinks": [
+    {
+      "label": "Ditzel's upholstered landscapes",
+      "href": "https://patinahall.com/furniture-library/designs/ditzel-upholstered-landscapes"
+    }
+  ]
+}
