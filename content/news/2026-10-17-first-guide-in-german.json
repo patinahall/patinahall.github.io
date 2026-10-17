@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "slug": "first-guide-in-german",
+  "title": "The first PatinaHall guide can now be read in German",
+  "description": "PatinaHall is starting to speak more than English. The first guide is readable in German at its own address, and a complete Dutch Furniture Library is being read through before publication.",
+  "publishedAt": "2026-10-17",
+  "label": "Language update",
+  "sections": [
+    {
+      "heading": "A marketplace should speak the language of the furniture",
+      "paragraphs": [
+        "Thonet bent its chairs in Vienna. The Bauhaus argued about furniture in Weimar and Dessau. A great many of the mid-century pieces that pass through PatinaHall were bought new in a German, Austrian or Swiss living room and have been in use ever since — and much of the rest was made, worn down and repaired in the Netherlands.",
+        "Until now all of that was explained to buyers in English, while they made decisions about condition, provenance and price that deserve a first language."
+      ]
+    },
+    {
+      "heading": "What is readable today",
+      "paragraphs": [
+        "The guide to choosing vintage nesting tables is now published in German, at its own German address, with German copy — not an English page behind a translated URL.",
+        "That distinction is the whole work. A language is only live when a reader who does not speak English can actually use the page, and when an address that does not exist behaves like any other missing page instead of quietly serving English."
+      ]
+    },
+    {
+      "heading": "What is coming",
+      "paragraphs": [
+        "The Furniture Library has been translated into Dutch in full, and those editions are being read through in Dutch before they are published. The first reviewed batch has already produced corrections that improved the English originals as well — a few overstated claims about photographs were fixed in both languages at once.",
+        "The interface and the buying FAQ follow, and further German guides are in preparation. Nothing is published in a language until somebody has read it in that language."
+      ]
+    },
+    {
+      "heading": "Why we do it this way",
+      "paragraphs": [
+        "Machine translation would have given us every page in every language this afternoon, and quietly invented certainty on each one. For furniture whose value depends on an honest account of its condition, that is worse than no translation at all.",
+        "PatinaHall is a marketplace for vintage furniture, and the furniture came from somewhere. We would like to sound like it."
+      ]
+    }
+  ],
+  "callToAction": {
+    "label": "Read the guide in German",
+    "href": "https://patinahall.com/de/guides/choosing-vintage-nesting-tables"
+  },
+  "relatedLinks": [
+    {
+      "label": "All PatinaHall Guides",
+      "href": "https://patinahall.com/guides"
+    }
+  ]
+}
