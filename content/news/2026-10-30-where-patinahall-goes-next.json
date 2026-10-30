@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "slug": "where-patinahall-goes-next",
+  "title": "Where PatinaHall goes next: the Library and the catalogue have not met yet",
+  "description": "A public note on direction. We have researched several hundred pieces of furniture and listed several hundred more for sale, and those two halves of PatinaHall have never been introduced to each other.",
+  "publishedAt": "2026-10-30",
+  "label": "Direction",
+  "sections": [
+    {
+      "heading": "What is already standing",
+      "paragraphs": [
+        "It is worth saying out loud what exists, because it took a year and it is unusual. PatinaHall has 325 buying Guides, each answering one real question with an inspection or measurement sequence you can use beside a listing, and all of them readable in English, Dutch and German. It has a Furniture Library of researched object histories and designer profiles, written from sources and reviewed rather than summarised from the internet. It has independent shops whose catalogues arrive from the system they already run — their own storefront, and now an Etsy shop — instead of being retyped into ours. And it has a pipeline that would rather keep a piece private than publish a claim about its age, material or condition that nobody has checked.",
+        "That is a strong half of a marketplace. The other half is a catalogue of one-of-a-kind furniture. And here is the thing we keep noticing: the two halves have never been introduced."
+      ]
+    },
+    {
+      "heading": "The piece in front of you has a story already written",
+      "paragraphs": [
+        "Open a listing for a Gispen 412 today and you get photographs, a price, measurements and the shop. You do not get the Gispen 412 story — how that tubular outline carries upholstery, leaves the space open and gives a little as you sit — even though it is written, researched, reviewed and sitting on this site in three languages. Read the story and you are not told that one is for sale.",
+        "In the other direction it is just as odd. A chrome-framed chair in the catalogue has a Guide dedicated to exactly what tarnish, pitting and plating loss can and cannot tell you, and the listing does not mention it.",
+        "So that is the first thing we are building: the connection between a piece for sale and what PatinaHall already knows about it. Nobody else can copy this quickly, because the expensive part is not the link — it is the several hundred honestly researched articles that have to exist first. Those are done."
+      ]
+    },
+    {
+      "heading": "One of each thing changes what a marketplace owes you",
+      "paragraphs": [
+        "Retail assumes there is another one. Vintage does not. Hesitate over a sideboard and it is gone; arrive looking for one and find nothing, and there is currently no reason for you to ever come back.",
+        "The second thing we are building is the mechanic that actually fits that: tell us what you are looking for, and we will tell you when one appears. A standing want rather than a search you have to remember to repeat. It is also the most useful thing we could hand the shops — a truthful account of what people came looking for and did not find."
+      ]
+    },
+    {
+      "heading": "And the ordinary things we owe you",
+      "paragraphs": [
+        "Some of what is next is not clever at all, just missing. A real way to narrow the catalogue — a teak sideboard, 160 to 180 centimetres, under nine hundred euros — rather than browsing a category and hoping.",
+        "Delivery treated as a fact on the page rather than as the subject of a Guide, because getting a wardrobe up a staircase in Ghent is where most of these decisions are actually won or lost. And condition described the same way on every piece: what the shop observed, and what remains unknown. We already refuse to invent that information. Stating it consistently is what turns the refusal into something a buyer can read as care rather than as an empty space.",
+        "No dates here, deliberately. This is a direction, published in the same place as the releases so it can be checked against what actually ships."
+      ]
+    }
+  ],
+  "callToAction": {
+    "label": "Browse the catalogue",
+    "href": "https://patinahall.com/catalog"
+  },
+  "relatedLinks": [
+    {
+      "label": "The Furniture Library",
+      "href": "https://patinahall.com/furniture-library"
+    },
+    {
+      "label": "All PatinaHall Guides",
+      "href": "https://patinahall.com/guides"
+    }
+  ]
+}
