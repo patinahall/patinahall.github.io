@@ -31,14 +31,8 @@ const allowedEditorialLinkOrigins = new Set([
   marketplaceOrigin,
   "https://www.entouragefinds.com"
 ]);
-/** This site's own roadmap. Origin alone is too broad, so the path is bound too. */
-const roadmapLinkOrigin = "https://github.com";
-const roadmapLinkPathPrefix = "/patinahall/";
 const assertEditorialLinkTarget = (url, field) => {
-  if (allowedEditorialLinkOrigins.has(url.origin)) {
-    return;
-  }
-  assert(url.origin === roadmapLinkOrigin && url.pathname.startsWith(roadmapLinkPathPrefix),
+  assert(allowedEditorialLinkOrigins.has(url.origin),
     `${field} is not an approved editorial origin`);
 };
 const allowedPeopleThemes = new Set([
