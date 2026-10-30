@@ -1,30 +1,23 @@
 {
   "schemaVersion": 1,
   "slug": "a-danish-shop-arrives-from-etsy",
-  "title": "A shop in Denmark joins, with its catalogue brought in from Etsy",
-  "description": "NordlysretroHygge is live on PatinaHall: eighty-one pieces, a published shop page, and the first catalogue we have brought in from an Etsy shop rather than a shop's own website.",
+  "title": "Nordlys Retro Hygge joins PatinaHall",
+  "description": "A shop in Denmark has joined PatinaHall, with more than eighty pieces now on its own shop page. Its catalogue came in from its Etsy shop — the first time we have brought one in that way.",
   "publishedAt": "2026-10-30",
   "label": "New shop",
   "sections": [
     {
-      "heading": "Nordlys Retro Hygge",
+      "heading": "A welcome",
       "paragraphs": [
-        "A Danish shop has joined PatinaHall. Its registration country is Denmark, its own account is live, and its shop page introduces it before the catalogue starts.",
-        "Eighty-five listings came in. Eighty-one of them are now public pieces on PatinaHall, with their prices, measurements and photographs, and the shop page is published and discoverable in its own right."
+        "Nordlys Retro Hygge, a shop in Denmark, has joined PatinaHall. Its page introduces the shop in its own words before the catalogue begins, and more than eighty of its pieces are there now with prices, measurements and photographs.",
+        "The best way to meet a shop is to look at what it chose to carry, so that is where we will leave you."
       ]
     },
     {
-      "heading": "The first catalogue from Etsy",
+      "heading": "Brought in from an Etsy shop",
       "paragraphs": [
-        "Until now, every shop on PatinaHall arrived through its own website — a Shopify, WooCommerce or nopCommerce storefront that PatinaHall recognised and read. This one arrived from an Etsy shop, through the ordinary import flow rather than a one-off job built for the occasion.",
-        "That matters more than one shop. A great many independent vintage dealers never built a website; they sell from an Etsy shop and a phone full of photographs. If joining PatinaHall means rebuilding a catalogue somewhere else first, those shops never join, and the furniture never gets found."
-      ]
-    },
-    {
-      "heading": "Four pieces are not published, on purpose",
-      "paragraphs": [
-        "Four of the eighty-five are being held back. One has evidence that contradicts itself and needs a person to settle it. One does not sit cleanly in any of our categories yet. Two timed out while their descriptions were being prepared and will be picked up again.",
-        "We would rather a piece stay private than go out with a claim about its age, material or condition that nobody has checked. Importing a catalogue is not the same thing as publishing it, and those two decisions stay separate on purpose."
+        "Every shop here has so far arrived through its own website — a storefront PatinaHall recognised and read. This catalogue came from the shop's Etsy shop instead, through the ordinary import rather than a job built for the occasion.",
+        "That opens the door for a lot of dealers. Plenty of independent vintage sellers never built a website: they work from an Etsy shop and a phone full of photographs. If joining PatinaHall meant rebuilding a catalogue somewhere else first, they would not join, and the furniture would not get found."
       ]
     }
   ],

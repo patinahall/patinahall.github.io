@@ -1,32 +1,26 @@
 {
   "schemaVersion": 1,
   "slug": "five-new-guides-and-how-paying-works",
-  "title": "Five new Guides, and a plain account of how paying works",
-  "description": "Joints, lamps, picture frames, curtains and furniture that has to move again — five new Guides, published in three languages at once. Alongside them, how money is meant to move between a shop and a buyer.",
+  "title": "Five new guides to choosing and living with vintage furniture",
+  "description": "Visible joints, several lamps in one room, an old picture frame, second-hand curtains, and furnishing a rental you will move out of. Published in English, Dutch and German.",
   "publishedAt": "2026-10-30",
   "label": "New Guides",
   "sections": [
     {
-      "heading": "Five questions that come up once the piece is in the room",
+      "heading": "Five new guides",
       "paragraphs": [
-        "Most of what PatinaHall writes answers a question asked in front of a listing. These five are asked slightly later — once the piece is yours, or once you are standing in a flat you do not own.",
-        "What a visible furniture joint can tell you keeps three things apart that are easy to confuse: how a piece was built, what condition it is in, and whether it can be taken apart to get up the stairs. It also separates a peg that is part of the joint itself from a separate dowel, which is a different claim about how the thing was made.",
-        "Several vintage lamps, one comfortable room gives each old lamp a job instead of a position, and builds an evening plan around the people actually in the room. An old frame for a picture you already love measures the opening, the rebate behind it and the usable depth before anybody promises the picture will fit. Vintage curtains that fit your window compares a second-hand pair against your own track or pole — finished width, drop, heading, lining, and what an alteration can realistically rescue.",
-        "And Vintage furniture for this rental and the next move is for the situation half of Europe is in: choosing pieces you can live with now, while writing down how they came in, what the largest single part is, and what moving them again will actually involve."
+        "Most PatinaHall guides answer a question you ask in front of a listing. These five are asked slightly later — once the piece is yours, or once you are standing in a flat you do not own. All five are published in English, Dutch and German, and are in the Guides hub under their topics.",
+        "What a visible furniture joint can tell you — keeps three things apart that are easy to confuse: how a piece was built, what condition it is in, and whether it can be taken apart to get up the stairs.",
+        "Several vintage lamps, one comfortable room — gives each old lamp a job rather than a position, and builds an evening plan around the people using the room.",
+        "An old frame for a picture you already love — measures the visible opening, the rebate behind it and the usable depth before anyone promises the picture will fit.",
+        "Vintage curtains that fit your window — compares a second-hand pair against your own track or pole: finished width, drop, heading, lining, and what an alteration can realistically rescue.",
+        "Vintage furniture for this rental and the next move — choosing pieces you can live with now while recording how they came in, what the largest single part is, and what moving them again will involve."
       ]
     },
     {
-      "heading": "Fifteen existing Guides went deeper",
+      "heading": "Fifteen existing guides went deeper",
       "paragraphs": [
-        "The same release expanded fifteen Guides that were already published — among them measuring a table for a room, measuring furniture for the route into your home, measuring a vintage bed for a modern mattress, telling teak from walnut and rosewood, reading solid wood against veneer and laminate, judging restored or refinished pieces, and arranging professional delivery.",
-        "All five new Guides were published in English, Dutch and German on the same day. That is now the default rather than a follow-up project."
-      ]
-    },
-    {
-      "heading": "How paying is meant to work",
-      "paragraphs": [
-        "We have also published a plain account of the money: what a shop's payment account is and why it belongs to the shop rather than to us, the order of events from a buyer's first message through the agreed piece and the agreed delivery price to the payment itself, and a worked example with real numbers — the piece, the delivery, what the buyer pays, what comes off it and what reaches the shop's own balance.",
-        "To be clear about what this is: it is the explanation, not the feature. PatinaHall does not take payment for a piece yet. We wrote the account first on purpose, because the questions people ask before paying a stranger for an old cabinet deserve an answer that exists in one place and does not change depending on who is replying."
+        "The same release expanded fifteen guides that were already published — among them measuring a table for a room, measuring furniture for the route into your home, measuring a vintage bed for a modern mattress, telling teak from walnut and rosewood, reading solid wood against veneer and laminate, judging restored or refinished pieces, and arranging professional delivery."
       ]
     }
   ],
@@ -36,8 +30,8 @@
   },
   "relatedLinks": [
     {
-      "label": "How paying works",
-      "href": "https://patinahall.com/seller-faq/payments"
+      "label": "Vintage curtains that fit your window",
+      "href": "https://patinahall.com/guides/choosing-vintage-curtains-for-your-window"
     },
     {
       "label": "All PatinaHall Guides",
