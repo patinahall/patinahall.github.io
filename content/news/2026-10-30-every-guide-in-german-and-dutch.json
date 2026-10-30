@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "slug": "every-guide-in-german-and-dutch",
+  "title": "Every PatinaHall guide now reads in German and Dutch",
+  "description": "All 325 Guides are published in English, Dutch and German. The first French Guides are live, and sixty new Furniture Library stories about Dutch furniture arrived in three languages at once.",
+  "publishedAt": "2026-10-30",
+  "label": "Language update",
+  "sections": [
+    {
+      "heading": "From one guide to all of them",
+      "paragraphs": [
+        "Two weeks ago we wrote that the first PatinaHall guide could be read in German. The honest version of that sentence was: one guide, out of three hundred and twenty. That gap has now closed. All 325 Guides are published in English, Dutch and German — each at its own address, with its own copy, rather than an English page sitting behind a translated URL.",
+        "That distinction is the whole work, and it is the part that takes the time. A language is only live when a reader who does not speak English can use the page from top to bottom, and when a German or Dutch address that does not exist behaves like any other missing page instead of quietly serving English."
+      ]
+    },
+    {
+      "heading": "French has started",
+      "paragraphs": [
+        "The first two dozen French Guides are published, with a language control that keeps the reader's choice as they move around the site. They are the ones a French-speaking buyer tends to need first: the Wishbone and Shell chairs, the J39, the Barcelona, the Camaleonda, a sagging sofa, upholstery and leather, black stains in old wood, and what restoration is likely to cost before the piece is bought rather than after."
+      ]
+    },
+    {
+      "heading": "Sixty stories about Dutch furniture, in three languages",
+      "paragraphs": [
+        "The Furniture Library also gained sixty new stories about Dutch furniture — forty-five objects and fifteen of the people who drew them. They are worth their own read, and they have one.",
+        "What belongs here is how they arrived: every one of the sixty was published in Dutch and German on the same day as the English. The Library is being translated collection by collection rather than all at once, and this is the first collection to come out in all three languages together."
+      ]
+    },
+    {
+      "heading": "What is not finished",
+      "paragraphs": [
+        "A number of older technical diagrams still carry their English lettering, even on a German or Dutch page. The drawn diagrams inside the Guides are translated; those photographic ones are not, and they are on the list.",
+        "The Furniture Library cannot be read in French yet, and most of it is still being worked through in Dutch and German. Nothing goes out in a language until that edition has been read through in it — which is slower, and worth it: the first reviewed Dutch batches produced corrections that improved the English originals too, including a few overstated claims about photographs that were fixed in both at once.",
+        "Machine translation would have given us every page in every language this afternoon, and quietly invented certainty on each one. For furniture whose value depends on an honest account of its condition, that is worse than no translation at all."
+      ]
+    }
+  ],
+  "callToAction": {
+    "label": "Read the Guides in German",
+    "href": "https://patinahall.com/de/guides"
+  },
+  "relatedLinks": [
+    {
+      "label": "De gidsen in het Nederlands",
+      "href": "https://patinahall.com/nl/guides"
+    },
+    {
+      "label": "The Furniture Library",
+      "href": "https://patinahall.com/furniture-library"
+    }
+  ]
+}
