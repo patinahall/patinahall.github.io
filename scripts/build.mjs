@@ -31,6 +31,16 @@ const allowedEditorialLinkOrigins = new Set([
   marketplaceOrigin,
   "https://www.entouragefinds.com"
 ]);
+/** This site's own roadmap. Origin alone is too broad, so the path is bound too. */
+const roadmapLinkOrigin = "https://github.com";
+const roadmapLinkPathPrefix = "/patinahall/";
+const assertEditorialLinkTarget = (url, field) => {
+  if (allowedEditorialLinkOrigins.has(url.origin)) {
+    return;
+  }
+  assert(url.origin === roadmapLinkOrigin && url.pathname.startsWith(roadmapLinkPathPrefix),
+    `${field} is not an approved editorial origin`);
+};
 const allowedPeopleThemes = new Set([
   "architecture",
   "hospitality",
@@ -115,10 +125,21 @@ const validatePost = (value, fileName) => {
       : boundedText(section.heading, `${fileName}.sections[${sectionIndex}].heading`, 120);
     assert(Array.isArray(section.paragraphs) && section.paragraphs.length > 0 && section.paragraphs.length <= 6,
       `${fileName}.sections[${sectionIndex}].paragraphs is invalid`);
+    const sectionLinks = section.links === undefined ? [] : section.links;
+    assert(Array.isArray(sectionLinks) && sectionLinks.length <= 6,
+      `${fileName}.sections[${sectionIndex}].links must contain at most 6 links`);
+    const links = sectionLinks.map((link, linkIndex) => {
+      const field = `${fileName}.sections[${sectionIndex}].links[${linkIndex}]`;
+      assert(link !== null && typeof link === "object", `${field} is invalid`);
+      const url = httpsUrl(link.href, `${field}.href`);
+      assertEditorialLinkTarget(url, `${field}.href`);
+      return { label: boundedText(link.label, `${field}.label`, 90), href: url.href };
+    });
     return {
       ...(heading === undefined ? {} : { heading }),
       paragraphs: section.paragraphs.map((paragraph, paragraphIndex) =>
-        boundedText(paragraph, `${fileName}.sections[${sectionIndex}].paragraphs[${paragraphIndex}]`, 1_200))
+        boundedText(paragraph, `${fileName}.sections[${sectionIndex}].paragraphs[${paragraphIndex}]`, 1_200)),
+      links
     };
   });
   assert(value.callToAction !== null && typeof value.callToAction === "object",
@@ -138,8 +159,7 @@ const validatePost = (value, fileName) => {
       link.href,
       `${fileName}.relatedLinks[${linkIndex}].href`
     );
-    assert(allowedEditorialLinkOrigins.has(url.origin),
-      `${fileName}.relatedLinks[${linkIndex}].href is not an approved editorial origin`);
+    assertEditorialLinkTarget(url, `${fileName}.relatedLinks[${linkIndex}].href`);
     return {
       label: boundedText(
         link.label,
@@ -757,6 +777,11 @@ for (const post of posts) {
       <section>
         ${section.heading === undefined ? "" : `<h2>${escapeHtml(section.heading)}</h2>`}
         ${section.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("\n        ")}
+        ${section.links.length === 0 ? "" : `<ul class="article__links">
+          ${section.links.map((link) =>
+            `<li><a href="${escapeHtml(link.href)}">${escapeHtml(link.label)} <span aria-hidden="true">↗</span></a></li>`
+          ).join("\n          ")}
+        </ul>`}
       </section>`).join("");
   const relatedLinks = post.relatedLinks.map((link) =>
     `<a class="article__related-link" href="${escapeHtml(link.href)}">${escapeHtml(link.label)} <span aria-hidden="true">↗</span></a>`

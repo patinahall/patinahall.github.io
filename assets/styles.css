@@ -584,6 +584,25 @@ h3,
   text-underline-offset: 5px;
 }
 
+.article__links {
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.article__links li {
+  margin: 0;
+}
+
+.article__links a {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-underline-offset: 5px;
+}
+
 .about-page,
 .not-found {
   padding: clamp(72px, 12vw, 150px) 0;
